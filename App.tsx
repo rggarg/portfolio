@@ -236,7 +236,7 @@ export default function App() {
             </div>
             <div className="space-y-8 text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
               <p>
-                I’m a <span className="text-slate-900 dark:text-white font-normal">Lead Product Engineer</span> with over 3 years of hands-on experience building enterprise-grade SaaS products. My work focuses on <span className="text-indigo-600 dark:text-indigo-400 font-normal italic">CRM, CLM, and digital transaction management systems</span>.
+                I’m a <span className="text-slate-900 dark:text-white font-normal">Lead Product Engineer</span> with over 3+ years of hands-on experience building enterprise-grade SaaS products. My work focuses on <span className="text-indigo-600 dark:text-indigo-400 font-normal italic">CRM, CLM, and digital transaction management systems</span>.
               </p>
               <p>
                 Currently, I lead the development of core product modules at Legitt AI, including complex CRM workflows and high-compliance eSignature solutions. I work closely with stakeholders to translate business requirements into <span className="text-slate-900 dark:text-white font-normal">scalable, reliable, and user-friendly systems</span>.

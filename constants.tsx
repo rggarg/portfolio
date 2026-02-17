@@ -50,7 +50,7 @@ export const EXPERIENCE: Experience = {
 export const PROJECTS: Project[] = [
   {
     title: "AI-driven CLM & CRM",
-    tech: "Node.js, Express.js, AWS, React",
+    tech: "MERN Stack, Redis, AWS",
     icon: "cpu",
     link: "https://legittai.com",
     description: [
