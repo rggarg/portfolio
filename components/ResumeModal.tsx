@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { X, Mail, Linkedin, Github, Download, FileText } from 'lucide-react';
+import { X, Mail, Linkedin, Download, FileText, Phone, Globe, MapPin } from 'lucide-react';
+import { RESUME_LINK } from '../constants';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -9,6 +10,10 @@ interface ResumeModalProps {
 
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
+
+  const handleDownload = () => {
+    window.open(RESUME_LINK, '_blank');
+  };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
@@ -19,121 +24,144 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
       ></div>
       
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col max-h-[90vh] shadow-2xl transition-colors duration-300">
+      <div className="relative w-full max-w-5xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col max-h-[95vh] shadow-2xl transition-colors duration-300">
         {/* Modal Header */}
-        <div className="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+        <div className="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
           <div className="flex items-center gap-3">
-            <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-500" />
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white">Rohit Garg - Resume</h2>
+            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
+               <FileText size={18} />
+            </div>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Resume Preview</h2>
           </div>
-          <div className="flex items-center gap-4">
-             <button className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-sm font-bold transition-all text-white">
-                <Download className="w-4 h-4" /> PDF
+          <div className="flex items-center gap-3">
+             <button 
+                onClick={handleDownload}
+                className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-xl text-xs font-bold transition-all text-white shadow-lg shadow-indigo-600/20"
+             >
+                <Download className="w-3.5 h-3.5" /> Download PDF
              </button>
              <button onClick={onClose} className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors text-slate-500 dark:text-slate-400">
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
              </button>
           </div>
         </div>
 
-        {/* Modal Content - ATS Style Resume */}
-        <div className="flex-grow overflow-y-auto p-8 bg-slate-100 dark:bg-slate-950">
-          <div className="max-w-3xl mx-auto bg-white text-slate-900 p-8 sm:p-12 shadow-sm rounded-xl">
-            <div className="space-y-10">
-              {/* Contact Header */}
-              <div className="text-center space-y-3">
-                <h1 className="text-4xl font-bold uppercase tracking-wider text-slate-900">Rohit Garg</h1>
-                <p className="text-lg font-semibold text-indigo-600">Lead Product Engineer | Full Stack Developer (MERN)</p>
-                <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-600">
-                  <span className="flex items-center gap-1"><Mail className="w-4 h-4" /> rohitgarg892000@gmail.com</span>
-                  <span className="flex items-center gap-1"><Linkedin className="w-4 h-4" /> linkedin.com/in/rggarg</span>
-                  {/* <span className="flex items-center gap-1"><Github className="w-4 h-4" /> github.com/rohitgarg</span> */}
+        {/* Modal Content - Styled to match the provided screenshot */}
+        <div className="flex-grow overflow-y-auto p-4 sm:p-8 bg-slate-200 dark:bg-slate-950">
+          <div className="max-w-[800px] mx-auto bg-white text-slate-900 p-10 sm:p-14 shadow-2xl rounded-sm font-sans min-h-[1056px]">
+            {/* Header Area */}
+            <div className="flex justify-between items-start mb-8">
+              <div className="space-y-1">
+                <h1 className="text-[32px] font-extrabold text-[#004a80] leading-tight">ROHIT GARG</h1>
+                <p className="text-[18px] font-bold text-slate-800">LEAD PRODUCT ENGINEER</p>
+              </div>
+              <div className="text-right space-y-1 text-[13px] text-slate-700">
+                <div className="flex items-center justify-end gap-2">
+                  <span>9671144525</span>
+                  <Phone size={14} className="text-[#004a80]" />
+                </div>
+                <div className="flex items-center justify-end gap-2 underline">
+                  <a href="mailto:rohitgarg892000@gmail.com">rohitgarg892000@gmail.com</a>
+                  <Mail size={14} className="text-[#004a80]" />
+                </div>
+                <div className="flex items-center justify-end gap-2 underline">
+                  <a href="https://linkedin.com/in/rggarg" target="_blank">LinkedIn</a>
+                  <Linkedin size={14} className="text-[#004a80]" />
+                </div>
+                <div className="flex items-center justify-end gap-2 underline">
+                  <a href="#">Portfolio</a>
+                  <Globe size={14} className="text-[#004a80]" />
                 </div>
               </div>
-
-              <div className="border-t-2 border-slate-100"></div>
-
-              {/* Summary */}
-              <section className="space-y-2">
-                <h2 className="text-lg font-bold uppercase text-slate-800 border-b border-slate-100 pb-1">Professional Summary</h2>
-                <p className="leading-relaxed text-slate-700">
-                  Lead Product Engineer with 4+ years of experience building scalable SaaS products in CRM, CLM, and eSignature domains. Strong expertise in MERN stack, backend system design, AWS infrastructure, and AI-powered automation. Proven ability to take ownership of core product modules and deliver enterprise-grade solutions.
-                </p>
-              </section>
-
-              {/* Skills */}
-              <section className="space-y-4">
-                <h2 className="text-lg font-bold uppercase text-slate-800 border-b border-slate-100 pb-1">Skills</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8 text-sm text-slate-700">
-                  <p><span className="font-bold text-slate-900">Languages:</span> JavaScript (ES6+)</p>
-                  <p><span className="font-bold text-slate-900">Frontend:</span> React.js, Next.js, Tailwind CSS</p>
-                  <p><span className="font-bold text-slate-900">Backend:</span> Node.js, Express.js, MongoDB, SQL</p>
-                  <p><span className="font-bold text-slate-900">Cloud:</span> AWS (EC2, S3, SES), Nginx, PM2</p>
-                  <p><span className="font-bold text-slate-900">Concepts:</span> System Design, REST APIs, SaaS Architecture</p>
-                  <p><span className="font-bold text-slate-900">AI:</span> Workflow automation, Document intelligence</p>
-                </div>
-              </section>
-
-              {/* Experience */}
-              <section className="space-y-4">
-                <h2 className="text-lg font-bold uppercase text-slate-800 border-b border-slate-100 pb-1">Professional Experience</h2>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between items-baseline">
-                      <h3 className="font-bold text-lg text-slate-900">Lead Product Engineer</h3>
-                      <span className="text-sm font-semibold text-slate-500">2022 – Present</span>
-                    </div>
-                    <div className="text-indigo-600 font-bold mb-2">Legitt AI</div>
-                    <ul className="list-disc ml-4 space-y-1.5 text-sm text-slate-700">
-                      <li>Led development of CRM and eSignature modules for enterprise SaaS platform.</li>
-                      <li>Designed scalable backend architecture supporting thousands of document workflows.</li>
-                      <li>Built multi-signer eSignature system with audit trail and compliance-ready logging.</li>
-                      <li>Implemented automation workflows and role-based access systems.</li>
-                      <li>Integrated AI-driven features for contract analysis and workflow efficiency.</li>
-                      <li>Worked closely with leadership and product teams to define feature roadmap.</li>
-                      <li>Improved system performance and code maintainability through refactoring.</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              {/* Key Projects */}
-              <section className="space-y-4">
-                <h2 className="text-lg font-bold uppercase text-slate-800 border-b border-slate-100 pb-1">Key Projects</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div>
-                    <h3 className="font-bold text-slate-800">eSignature Platform</h3>
-                    <p className="text-xs text-slate-500">Multi-party workflows, Audit trail, Signature certificates.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-800">CRM System</h3>
-                    <p className="text-xs text-slate-500">Lead management, Deal pipelines, Automation rules.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-800">AI-Based CLM</h3>
-                    <p className="text-xs text-slate-500">Contract intelligence, Risk insights, Renewal alerts.</p>
-                  </div>
-                </div>
-              </section>
-
-              {/* Education */}
-              <section className="space-y-2">
-                <h2 className="text-lg font-bold uppercase text-slate-800 border-b border-slate-100 pb-1">Education</h2>
-                <div>
-                  <div className="flex justify-between font-bold text-slate-900 text-sm">
-                    <span>Bachelor of Technology in Computer Science</span>
-                    <span>2018 - 2022</span>
-                  </div>
-                  <p className="text-sm text-slate-500 italic">Deenbandhu Chhotu Ram University of Science and Technology</p>
-                </div>
-              </section>
             </div>
+
+            {/* SUMMARY Section */}
+            <section className="mb-6">
+              <h2 className="text-[15px] font-black text-[#004a80] uppercase tracking-wide mb-1">SUMMARY</h2>
+              <div className="h-[1.5px] bg-[#004a80] mb-3"></div>
+              <p className="text-[13px] leading-[1.6] text-justify text-slate-800">
+                Product-focused Software Engineer with 3+ years of experience building scalable, enterprise-grade SaaS platforms across CRM, CLM, and digital transaction management domains. Proven expertise in the MERN stack and AWS, with strong ownership of end-to-end product architecture, automation systems, and AI-powered workflows. Experienced in designing high-performance backend services, optimizing system scalability, and delivering mission-critical enterprise features. Adept at aligning technical execution with product strategy to drive measurable business outcomes.
+              </p>
+            </section>
+
+            {/* SKILLS Section */}
+            <section className="mb-6">
+              <h2 className="text-[15px] font-black text-[#004a80] uppercase tracking-wide mb-1">SKILLS</h2>
+              <div className="h-[1.5px] bg-[#004a80] mb-3"></div>
+              <div className="space-y-1 text-[13px]">
+                <p><span className="font-bold w-48 inline-block">Programming & Backend:</span> JavaScript, Python, Node.js, Express.js, Redis</p>
+                <p><span className="font-bold w-48 inline-block">Frontend:</span> React.js, Redux, Next.js</p>
+                <p><span className="font-bold w-48 inline-block">Databases:</span> MongoDB, MySQL, Firebase</p>
+                <p><span className="font-bold w-48 inline-block">Cloud & DevOps:</span> AWS (EC2, S3, IAM, Amplify), CI/CD Pipelines</p>
+                <p><span className="font-bold w-48 inline-block">Architecture & Engineering:</span> System Design, Scalable SaaS Architecture, Performance Optimization</p>
+                <p><span className="font-bold w-48 inline-block">Tools & Integrations:</span> Git, GitHub, Bitbucket, JIRA, Postman, Salesforce (SFDC), Google Drive, Microsoft 365, Dropbox</p>
+              </div>
+            </section>
+
+            {/* EXPERIENCE Section */}
+            <section className="mb-6">
+              <h2 className="text-[15px] font-black text-[#004a80] uppercase tracking-wide mb-1">EXPERIENCE</h2>
+              <div className="h-[1.5px] bg-[#004a80] mb-3"></div>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <h3 className="text-[14px] font-black text-slate-900">LEAD PRODUCT ENGINEER</h3>
+                    <span className="text-[13px] font-bold text-slate-700">Feb 2022 – Present</span>
+                  </div>
+                  <div className="text-[13px] font-bold text-slate-600 mb-2 italic">Legitt AI | Noida</div>
+                  <ul className="list-disc ml-4 space-y-1 text-[13px] text-slate-800 leading-[1.4]">
+                    <li>Led architecture and development of an AI-driven CLM and CRM platform serving enterprise clients.</li>
+                    <li>Owned end-to-end product modules including CRM workflows, contract lifecycle management, and eSignature systems.</li>
+                    <li>Designed and built scalable backend services and REST APIs using Node.js, Express, and cloud infrastructure (AWS).</li>
+                    <li>Improved API performance by 50% through database optimization and caching strategies.</li>
+                    <li>Enhanced system reliability by implementing monitoring, logging, and alerting mechanisms.</li>
+                    <li>Built and optimized dynamic, responsive UI components using React.js for improved user experience.</li>
+                    <li>Led full feature lifecycle from requirement analysis and system design to deployment and production rollout.</li>
+                    <li>Collaborated with cross-functional teams (product, sales, operations) to deliver high-impact enterprise features.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* EDUCATION Section */}
+            <section className="mb-6">
+              <h2 className="text-[15px] font-black text-[#004a80] uppercase tracking-wide mb-1">EDUCATION</h2>
+              <div className="h-[1.5px] bg-[#004a80] mb-3"></div>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <h3 className="text-[13px] font-bold text-slate-900">Bachelor of Technology</h3>
+                    <span className="text-[12px] font-bold text-slate-700 uppercase">Aug 2018 - June 2022</span>
+                  </div>
+                  <p className="text-[13px] text-slate-700">Deenbandhu Chhotu Ram University of Science and Technology</p>
+                </div>
+                <div>
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <h3 className="text-[13px] font-bold text-slate-900">Secondary School</h3>
+                    <span className="text-[12px] font-bold text-slate-700 uppercase">Apr 2016 - Mar 2017</span>
+                  </div>
+                  <p className="text-[13px] text-slate-700">J.A. Saraswati Vidya Peeth Senior Secondary School</p>
+                </div>
+              </div>
+            </section>
+
+            {/* ADDITIONAL INFORMATION Section */}
+            <section className="mb-6">
+              <h2 className="text-[15px] font-black text-[#004a80] uppercase tracking-wide mb-1">ADDITIONAL INFORMATION</h2>
+              <div className="h-[1.5px] bg-[#004a80] mb-3"></div>
+              <ul className="list-disc ml-4 space-y-1 text-[13px] text-slate-800 leading-[1.4]">
+                <li>Strong understanding of SaaS product architecture and enterprise workflow automation.</li>
+                <li>Experience working closely with cross-functional teams and enterprise stakeholders.</li>
+                <li>Passionate about AI-driven product innovation and system optimization.</li>
+                <li>Fluent in English, Hindi, Punjabi, and Haryanvi.</li>
+              </ul>
+            </section>
           </div>
         </div>
         
-        {/* Mobile Close Only visible on small screens */}
+        {/* Footer for Previewing on Small Screens */}
         <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-center md:hidden transition-colors">
-           <button onClick={onClose} className="w-full py-3 bg-slate-200 dark:bg-slate-800 rounded-xl font-bold text-slate-800 dark:text-white">Close Preview</button>
+           <button onClick={onClose} className="w-full py-3 bg-indigo-600 rounded-xl font-bold text-white shadow-lg">Close Preview</button>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ import {
   MapPin,
   ArrowUp
 } from 'lucide-react';
-import { SKILLS, EXPERIENCE, PROJECTS, HIGHLIGHTS } from './constants';
+import { SKILLS, EXPERIENCE, PROJECTS, HIGHLIGHTS, RESUME_LINK } from './constants';
 import { ResumeModal } from './components/ResumeModal';
 
 export default function App() {
@@ -81,6 +81,10 @@ export default function App() {
       element.scrollIntoView({ behavior: 'smooth' });
       window.history.pushState(null, '', `#${id}`);
     }
+  };
+
+  const handleDownloadResume = () => {
+    window.open(RESUME_LINK, '_blank');
   };
 
   const NavItem = ({ href, children }: React.PropsWithChildren<{ href: string }>) => {
@@ -190,7 +194,7 @@ export default function App() {
               </p>
               <div className="flex flex-wrap gap-5 pt-4">
                 <button 
-                  onClick={() => setIsResumeOpen(true)}
+                  onClick={handleDownloadResume}
                   className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-xl font-bold flex items-center gap-2 transition-all hover:scale-105 shadow-xl shadow-indigo-600/20 text-white"
                 >
                   <Download className="w-5 h-5" /> Download Resume
@@ -232,10 +236,10 @@ export default function App() {
             </div>
             <div className="space-y-8 text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
               <p>
-                I’m a <span className="text-slate-900 dark:text-white font-normal">Lead Product Engineer</span> with over 4 years of hands-on experience building enterprise-grade SaaS products. My work focuses on <span className="text-indigo-600 dark:text-indigo-400 font-normal italic">CRM, CLM, and digital transaction management systems</span>.
+                I’m a <span className="text-slate-900 dark:text-white font-normal">Lead Product Engineer</span> with over 3 years of hands-on experience building enterprise-grade SaaS products. My work focuses on <span className="text-indigo-600 dark:text-indigo-400 font-normal italic">CRM, CLM, and digital transaction management systems</span>.
               </p>
               <p>
-                Currently, I lead the development of core product modules, including complex CRM workflows and high-compliance eSignature solutions. I work closely with stakeholders to translate business requirements into <span className="text-slate-900 dark:text-white font-normal">scalable, reliable, and user-friendly systems</span>.
+                Currently, I lead the development of core product modules at Legitt AI, including complex CRM workflows and high-compliance eSignature solutions. I work closely with stakeholders to translate business requirements into <span className="text-slate-900 dark:text-white font-normal">scalable, reliable, and user-friendly systems</span>.
               </p>
               <p>
                 I believe in <span className="text-indigo-600 dark:text-indigo-400 font-normal italic">ownership-driven development</span>. Beyond writing code, I design systems that grow with the business, leveraging <span className="text-slate-900 dark:text-white font-normal">AI to automate repetitive tasks</span> and enable smarter decision-making.
@@ -261,11 +265,12 @@ export default function App() {
               {SKILLS.map((group, idx) => (
                 <div key={idx} className="glass-card p-8 rounded-3xl hover:border-indigo-500/50 transition-all duration-300 group hover:bg-white/40 dark:hover:bg-slate-900/40 border border-slate-200 dark:border-slate-800">
                   <div className="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-                    {group.category === 'Core Engineering' && <Globe className="w-6 h-6" />}
-                    {group.category === 'Backend' && <Database className="w-6 h-6" />}
-                    {group.category === 'Frontend' && <Layout className="w-6 h-6" />}
-                    {group.category === 'Cloud & DevOps' && <Cloud className="w-6 h-6" />}
-                    {group.category === 'AI & Automation' && <Cpu className="w-6 h-6" />}
+                    {group.category.includes('Backend') && <Database className="w-6 h-6" />}
+                    {group.category.includes('Frontend') && <Layout className="w-6 h-6" />}
+                    {group.category.includes('Cloud') && <Cloud className="w-6 h-6" />}
+                    {group.category.includes('Architecture') && <Globe className="w-6 h-6" />}
+                    {group.category.includes('Tools') && <Cpu className="w-6 h-6" />}
+                    {!['Backend', 'Frontend', 'Cloud', 'Architecture', 'Tools'].some(cat => group.category.includes(cat)) && <Zap className="w-6 h-6" />}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
                     {group.category}
@@ -415,9 +420,6 @@ export default function App() {
                 <a href="https://www.linkedin.com/in/rggarg/" target="_blank" rel="noopener noreferrer" className="p-5 bg-white/10 hover:bg-white/20 text-white rounded-2xl transition-all border border-white/10 backdrop-blur-md">
                   <Linkedin className="w-7 h-7" />
                 </a>
-                {/* <a href="https://github.com/rohitgarg" target="_blank" rel="noopener noreferrer" className="p-5 bg-white/10 hover:bg-white/20 text-white rounded-2xl transition-all border border-white/10 backdrop-blur-md">
-                  <Github className="w-7 h-7" />
-                </a> */}
               </div>
             </div>
           </div>
@@ -452,9 +454,6 @@ export default function App() {
                 Lead Product Engineer specializing in building enterprise-grade SaaS platforms with AI-powered automation and scalable backend architecture.
               </p>
               <div className="flex items-center gap-4">
-                {/* <a href="https://github.com/rohitgarg" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all border border-slate-200 dark:border-slate-700">
-                  <Github size={20} />
-                </a> */}
                 <a href="https://www.linkedin.com/in/rggarg/" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all border border-slate-200 dark:border-slate-700">
                   <Linkedin size={20} />
                 </a>
