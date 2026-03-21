@@ -2,23 +2,23 @@ import themeConfig from '../../tailwind.config.js';
 
 const colors = themeConfig.theme.extend.colors as any;
 export const personalInfo = {
- name: "Your Name",
+ name: "Rohit Garg",
  title: "Lead Product Engineer",
  tagline: "Building scalable, AI-driven enterprise systems",
- email: "hello@yourname.com",
+ email: "rohitgarg892000@gmail.com",
  location: "India",
  available: true,
- github: "https://github.com/yourname",
- linkedin: "https://linkedin.com/in/yourname",
- twitter: "https://twitter.com/yourname",
- resume: "/resume.pdf",
+ github: "https://github.com/rggarg",
+ linkedin: "https://linkedin.com/in/rggarg",
+ twitter: "https://x.com/Rohit18843213",
+ resume: "https://drive.google.com/file/d/1Pk_Lj1WYrM8FdgudXnVgTGIXI99AL3x8/view",
  bio: "Lead Product Engineer with deep expertise in the MERN stack and cloud-native AWS architectures. I specialize in building scalable, high-performance enterprise web applications and AI-driven products — from architecture through deployment.",
  shortBio: "3+ years shipping production-grade, AI-powered enterprise platforms. I own problems end-to-end: system design, API performance, team leadership.",
 };
 
 export const stats = [
  { value: "3+", label: "Years Experience", suffix: "" },
- { value: "50", label: "API Speed Boost", suffix: "%" },
+//  { value: "50", label: "API Speed Boost", suffix: "%" },
  { value: "4+", label: "Enterprise Products", suffix: "" },
  { value: "100", label: "Team Productivity", suffix: "%" },
 ];
@@ -94,7 +94,7 @@ export const experience = [
  current: true,
  description: "Leading architecture and development of an AI-driven enterprise CLM platform. Defining long-term technical strategy and driving key engineering decisions across the stack.",
  achievements: [
- { text: "Reduced API response time by 50% through targeted profiling, caching, and query optimization", highlight: "50% faster APIs" },
+//  { text: "Reduced API response time by 50% through targeted profiling, caching, and query optimization", highlight: "50% faster APIs" },
  { text: "Led architecture of AI-powered Contract Lifecycle Management platform used by enterprise clients", highlight: "AI Enterprise Platform" },
  { text: "Implemented monitoring, logging, and alerting infrastructure ensuring system reliability at scale", highlight: "99.9% Uptime" },
  { text: "Mentored junior developers through structured code reviews, improving team velocity significantly", highlight: "Team Leadership" },

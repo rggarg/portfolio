@@ -59,7 +59,7 @@ export default function Navbar() {
  <span className=" text-accent text-description font-bold">{'>'}</span>
  </div>
  <span className=" font-bold text-title text-text-main tracking-tight">
- LPE<span className="text-accent">.</span>
+ Rohit<span className="text-accent">.</span>
  </span>
  </a>
 

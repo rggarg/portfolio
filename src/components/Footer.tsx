@@ -9,7 +9,7 @@ export default function Footer() {
  <span className=" text-accent text-description font-bold">{'>'}</span>
  </div>
  <span className=" font-bold text-subtitle text-text-main">
- LPE<span className="text-accent">.</span>
+ Rohit<span className="text-accent">.</span>
  </span>
  </div>
 
@@ -20,9 +20,9 @@ export default function Footer() {
  </span>
  </div>
 
- <span className=" text-description text-text-muted">
+ {/* <span className=" text-description text-text-muted">
  Built with React + Vite + Tailwind
- </span>
+ </span> */}
  </div>
  </footer>
  );
