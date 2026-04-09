@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { projects } from '../data/portfolio';
+import { Link } from 'react-router-dom';
+import { projects } from '../../../data/portfolio';
 
 interface ProjectCardProps {
   project: {
@@ -10,6 +11,7 @@ interface ProjectCardProps {
     title: string;
     description: string;
     longDescription?: string;
+    link?: string;
     stack: string[];
     contributions: string[];
     impact?: string[];
@@ -102,6 +104,14 @@ function ProjectCard({ project, featured = false }: ProjectCardProps) {
  ))}
  </ul>
  </div>
+
+ {project.link && (
+ <div className="mt-6 pt-5 border-t border-border">
+ <Link to={project.link} className="inline-flex items-center gap-2.5 text-text-main hover:text-accent transition-colors font-semibold">
+ View Full Case Study <span className="text-xl leading-none">&rarr;</span>
+ </Link>
+ </div>
+ )}
  </div>
  </div>
  </div>
@@ -159,6 +169,14 @@ function ProjectCard({ project, featured = false }: ProjectCardProps) {
  <span className=" text-description px-2 py-0.5 text-text-muted">+{project.stack.length - 4}</span>
  )}
  </div>
+
+ {project.link && (
+ <div className="mt-6 pt-4 border-t border-border">
+ <Link to={project.link} className="inline-flex items-center gap-2 text-sm text-text-main hover:text-accent transition-colors font-semibold">
+ View Full Case Study <span className="text-lg leading-none">&rarr;</span>
+ </Link>
+ </div>
+ )}
  </div>
  );
 }

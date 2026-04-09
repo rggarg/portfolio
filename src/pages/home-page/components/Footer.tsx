@@ -1,4 +1,4 @@
-import { personalInfo } from '../data/portfolio';
+import { personalInfo } from '../../../data/portfolio';
 
 export default function Footer() {
  return (
@@ -6,7 +6,7 @@ export default function Footer() {
  <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
  <div className="flex items-center gap-3">
  <div className="w-6 h-6 rounded bg-accent/10 border border-accent/30 flex items-center justify-center">
- <span className=" text-accent text-description font-bold">{'>'}</span>
+ <span className=" text-accent text-description font-bold">{'>_'}</span>
  </div>
  <span className=" font-bold text-subtitle text-text-main">
  Rohit<span className="text-accent">.</span>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { skills, techStack } from '../data/portfolio';
+import { skills, techStack } from '../../../data/portfolio';
 
 interface SkillBarProps {
   name: string;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { personalInfo, stats, techLogos } from '../data/portfolio';
+import { personalInfo, stats, techLogos } from '../../../data/portfolio';
 
 const roles = [
  'Lead Product Engineer',

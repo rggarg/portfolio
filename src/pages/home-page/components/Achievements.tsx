@@ -1,4 +1,4 @@
-import { achievements, differentiators } from '../data/portfolio';
+import { achievements, differentiators } from '../../../data/portfolio';
 
 export default function Achievements() {
  return (

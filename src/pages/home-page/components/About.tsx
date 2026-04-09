@@ -1,4 +1,4 @@
-import { personalInfo } from '../data/portfolio';
+import { personalInfo } from '../../../data/portfolio';
 
 const values = [
  { icon: '🎯', title: 'Ownership Mindset', desc: 'I take full responsibility — from architecture through deployment and monitoring.' },

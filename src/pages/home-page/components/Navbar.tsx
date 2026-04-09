@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { personalInfo } from '../data/portfolio';
+import { personalInfo } from '../../../data/portfolio';
 
 const navLinks = [
  { label: 'About', href: '#about' },
@@ -56,7 +56,7 @@ export default function Navbar() {
  className="flex items-center gap-2 group"
  >
  <div className="w-8 h-8 rounded bg-accent/10 border border-accent/30 flex items-center justify-center transition-all group-hover:bg-accent/20 group-hover:border-accent">
- <span className=" text-accent text-description font-bold">{'>'}</span>
+ <span className=" text-accent text-description font-bold">{'>_'}</span>
  </div>
  <span className=" font-bold text-title text-text-main tracking-tight">
  Rohit<span className="text-accent">.</span>
