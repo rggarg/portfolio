@@ -54,7 +54,7 @@
 
  .section-label::after {
  content: '';
- @apply flex-1 max-w-[48px] h-px bg-accent opacity-40;
+ @apply flex-1 max-w-12 h-px bg-accent opacity-40;
  }
 
  .glass-card {

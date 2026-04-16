@@ -104,9 +104,9 @@ export default function Navbar() {
  className="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5 group"
  aria-label="Toggle menu"
  >
- <span className={`block w-5 h-px bg-text-main transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-[5px]' : ''}`} />
+ <span className={`block w-5 h-px bg-text-main transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-5px' : ''}`} />
  <span className={`block w-5 h-px bg-text-main transition-all duration-300 ${menuOpen ? 'opacity-0 scale-x-0' : ''}`} />
- <span className={`block w-5 h-px bg-text-main transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-[5px]' : ''}`} />
+ <span className={`block w-5 h-px bg-text-main transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-5px' : ''}`} />
  </button>
  </div>
  </div>

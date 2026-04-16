@@ -24,7 +24,7 @@ export default function ESignHero() {
         {/* Radial glow */}
         <div className="absolute inset-0 mesh-gradient pointer-events-none" />
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-[0.04] pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-800 h-800 rounded-full opacity-4 pointer-events-none"
           style={{ background: 'radial-gradient(circle, #00ff88, transparent 70%)' }}
         />
 
@@ -37,7 +37,7 @@ export default function ESignHero() {
           </div>
 
           {/* Title */}
-          <h1 className="animate-fade-up text-[clamp(2rem,6vw,4.5rem)] font-black leading-[1.1] tracking-tight mb-6">
+          <h1 className="animate-fade-up text-hero font-black leading-tight-1 tracking-tight mb-6">
             Legitt AI{' '}
             <span className="accent-gradient">E-Signature</span>
             <br />
@@ -64,7 +64,7 @@ export default function ESignHero() {
               (tag) => (
                 <span
                   key={tag}
-                  className="text-[12px] font-medium px-3 py-1 rounded-full border border-border text-text-dim hover:border-accent/40 hover:text-accent transition-all duration-200"
+                  className="text-small font-medium px-3 py-1 rounded-full border border-border text-text-dim hover:border-accent/40 hover:text-accent transition-all duration-200"
                 >
                   {tag}
                 </span>
@@ -78,7 +78,7 @@ export default function ESignHero() {
             style={{ animationDelay: '0.2s' }}
           >
             <div className="flex flex-col items-center gap-1.5">
-              <span className="text-[10px] tracking-[0.15em] uppercase text-text-dim font-medium">Built at</span>
+              <span className="text-micro tracking-wide-em uppercase text-text-dim font-medium">Built at</span>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border/60 bg-white/[0.03] backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
                 <img
                   src={legittLogo}
@@ -119,10 +119,10 @@ export default function ESignHero() {
             {heroStats.map((stat) => (
               <div
                 key={stat.label}
-                className="glass-card rounded-xl p-4 min-h-[96px] flex flex-col items-center justify-center text-center border-border/60 hover:border-accent/30 transition-all duration-300"
+                className="glass-card rounded-xl p-4 min-h-24 flex flex-col items-center justify-center text-center border-border/60 hover:border-accent/30 transition-all duration-300"
               >
-                <div className="text-[1.5rem] font-black text-accent leading-none mb-1.5 whitespace-nowrap">{stat.value}</div>
-                <div className="text-[11px] text-text-dim tracking-wide leading-snug">{stat.label}</div>
+                <div className="text-title-md font-black text-accent leading-none mb-1.5 whitespace-nowrap">{stat.value}</div>
+                <div className="text-mini text-text-dim tracking-wide leading-snug">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function ESignHero() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted animate-bounce">
-          <span className="text-[11px] tracking-widest uppercase">Scroll</span>
+          <span className="text-mini tracking-widest uppercase">Scroll</span>
           <ChevronDown size={16} />
         </div>
       </section>

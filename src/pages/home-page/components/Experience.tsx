@@ -16,12 +16,12 @@ export default function Experience() {
  {/* Timeline */}
  <div className="relative">
  {/* Vertical line */}
- <div className="hidden lg:block absolute left-[180px] top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-border to-transparent" />
+ <div className="hidden lg:block absolute left-180 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-border to-transparent" />
 
  <div className="space-y-16">
  {experience.map((exp, idx) => (
  <div key={idx} className="reveal">
- <div className="lg:grid lg:grid-cols-[180px_1fr] gap-12">
+ <div className="lg:grid lg:grid-cols-layout-sidebar gap-12">
  {/* Left - date/meta */}
  <div className="mb-6 lg:mb-0 lg:pt-1 lg:text-right">
  <div className=" text-description tracking-widest uppercase text-accent mb-2">
@@ -82,7 +82,7 @@ export default function Experience() {
  ))}
 
  {/* Earlier experience placeholder */}
- <div className="reveal lg:grid lg:grid-cols-[180px_1fr] gap-12">
+ <div className="reveal lg:grid lg:grid-cols-layout-sidebar gap-12">
  <div className="mb-4 lg:mb-0 lg:text-right">
  <div className=" text-description tracking-widest uppercase text-text-muted">2022 – 2025</div>
  </div>

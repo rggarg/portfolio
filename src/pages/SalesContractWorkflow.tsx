@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import Footer from '../components/Footer';
 import { CustomCursor, ScrollProgress } from '../components/Cursor';
 import rategainLogo from '../assets/images/rategain-logo.svg';
 import legittLogo from '../assets/images/legitt-ai-logo.webp';
@@ -31,7 +32,7 @@ import {
 function PhaseTag({ name, color }: { name: string; color: string }) {
   return (
     <span
-      className="inline-flex items-center text-[11px] font-bold tracking-wider uppercase px-2 py-0.5 rounded"
+      className="inline-flex items-center text-mini font-bold tracking-wider uppercase px-2 py-0.5 rounded"
       style={{ color, background: `${color}18`, border: `1px solid ${color}33` }}
     >
       {name}
@@ -41,11 +42,11 @@ function PhaseTag({ name, color }: { name: string; color: string }) {
 
 function SideTag({ side }: { side: 'sfdc' | 'legitt' }) {
   return side === 'sfdc' ? (
-    <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-[#009EDB]/10 border border-[#009EDB]/30 text-[#009EDB]">
+    <span className="text-micro font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-brand-blue/10 border border-brand-blue/30 text-brand-blue">
       SFDC
     </span>
   ) : (
-    <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-accent/10 border border-accent/30 text-accent">
+    <span className="text-micro font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-accent/10 border border-accent/30 text-accent">
       Legitt
     </span>
   );
@@ -61,7 +62,7 @@ function FlowStep({ step, index }: { step: typeof flowSteps[0]; index: number })
       <div className={`flex-1 ${isLeft ? 'text-left' : 'text-right'}`}>
         <button
           onClick={() => setOpen(!open)}
-          className="w-full glass-card rounded-xl p-5 text-left group hover:border-white/10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,136,0.04)]"
+          className="w-full glass-card rounded-xl p-5 text-left group hover:border-white/10 transition-all duration-300 hover:shadow-card-glow"
           style={{ textAlign: isLeft ? 'left' : 'right' }}
         >
           <div className={`flex items-center gap-2 mb-2 ${isLeft ? '' : 'justify-end'}`}>
@@ -89,12 +90,12 @@ function FlowStep({ step, index }: { step: typeof flowSteps[0]; index: number })
               className={`flex items-start gap-2 p-3 rounded-lg border border-border bg-surface/50 ${isLeft ? '' : 'flex-row-reverse text-right'}`}
             >
               <ArrowRight size={14} className="text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-[12px] text-text-dim font-mono">{step.dataFlow}</span>
+              <span className="text-small text-text-dim font-mono">{step.dataFlow}</span>
             </div>
             {step.sfdc.length > 0 && (
               <div className={`flex gap-1.5 mt-3 flex-wrap ${isLeft ? '' : 'justify-end'}`}>
                 {step.sfdc.map((obj) => (
-                  <span key={obj} className="text-[10px] px-2 py-0.5 rounded bg-[#009EDB]/10 border border-[#009EDB]/20 text-[#009EDB] font-mono">
+                  <span key={obj} className="text-micro px-2 py-0.5 rounded bg-brand-blue/10 border border-brand-blue/20 text-brand-blue font-mono">
                     {obj}
                   </span>
                 ))}
@@ -211,7 +212,7 @@ export default function SalesContractWorkflow() {
         {/* Radial glow */}
         <div className="absolute inset-0 mesh-gradient pointer-events-none" />
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full opacity-[0.03] pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-700 h-700 rounded-full opacity-3 pointer-events-none"
           style={{ background: 'radial-gradient(circle, #00ff88, transparent 70%)' }}
         />
 
@@ -224,7 +225,7 @@ export default function SalesContractWorkflow() {
           </div>
 
           {/* Title */}
-          <h1 className="animate-fade-up text-[clamp(2rem,6vw,4.5rem)] font-black leading-[1.1] tracking-tight mb-6">
+          <h1 className="animate-fade-up text-hero font-black leading-tight-1 tracking-tight mb-6">
             End-to-End{' '}
             <span className="accent-gradient">Sales Contract</span>
             <br />
@@ -243,7 +244,7 @@ export default function SalesContractWorkflow() {
           {/* Tags */}
           <div className="animate-fade-up flex flex-wrap justify-center gap-2 mb-12" style={{ animationDelay: '0.2s' }}>
             {['MERN Stack', 'Salesforce REST API', 'OpenAI', 'Microsoft 365', 'SharePoint', 'Legitt e-Sign', 'MySQL', 'AWS'].map((tag) => (
-              <span key={tag} className="text-[12px] font-medium px-3 py-1 rounded-full border border-border text-text-dim hover:border-accent/40 hover:text-accent transition-all duration-200">
+              <span key={tag} className="text-small font-medium px-3 py-1 rounded-full border border-border text-text-dim hover:border-accent/40 hover:text-accent transition-all duration-200">
                 {tag}
               </span>
             ))}
@@ -254,7 +255,7 @@ export default function SalesContractWorkflow() {
 
             {/* Legitt (builder) */}
             <div className="flex flex-col items-center gap-1.5">
-              <span className="text-[10px] tracking-[0.15em] uppercase text-text-dim font-medium">Built by</span>
+              <span className="text-micro tracking-wide-em uppercase text-text-dim font-medium">Built by</span>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border/60 bg-white/[0.03] backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
                 <img
                   src={legittLogo}
@@ -276,7 +277,7 @@ export default function SalesContractWorkflow() {
 
             {/* RateGain (client) */}
             <div className="flex flex-col items-center gap-1.5">
-              <span className="text-[10px] tracking-[0.15em] uppercase text-text-dim font-medium">Built for</span>
+              <span className="text-micro tracking-wide-em uppercase text-text-dim font-medium">Built for</span>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border/60 bg-white/[0.03] backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
                 <img
                   src={rategainLogo}
@@ -310,7 +311,7 @@ export default function SalesContractWorkflow() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted animate-bounce">
-          <span className="text-[11px] tracking-widest uppercase">Scroll</span>
+          <span className="text-mini tracking-widest uppercase">Scroll</span>
           <ChevronDown size={16} />
         </div>
       </section>
@@ -335,7 +336,7 @@ export default function SalesContractWorkflow() {
                   <div className="w-12 h-12 rounded-xl bg-surface flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
                     <Icon size={22} className={m.color} />
                   </div>
-                  <div className={`text-[2rem] font-black mb-1 ${m.color}`}>{m.value}</div>
+                  <div className={`text-display font-black mb-1 ${m.color}`}>{m.value}</div>
                   <div className="text-subtitle font-bold text-text-main mb-1.5">{m.label}</div>
                   <div className="text-description text-text-dim">{m.sub}</div>
                 </div>
@@ -362,7 +363,7 @@ export default function SalesContractWorkflow() {
                   'Deals that should close in days took weeks or months — delaying revenue recognition.',
                 ].map((p, i) => (
                   <div key={i} className="flex items-start gap-3 text-text-dim text-description leading-relaxed">
-                    <span className="w-5 h-5 rounded-full border border-red-500/40 text-red-400 flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5">✕</span>
+                    <span className="w-5 h-5 rounded-full border border-red-500/40 text-red-400 flex items-center justify-center text-micro flex-shrink-0 mt-0.5">✕</span>
                     {p}
                   </div>
                 ))}
@@ -415,7 +416,7 @@ export default function SalesContractWorkflow() {
                     <img
                       src={sc.src}
                       alt={sc.title}
-                      className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                      className="w-full object-cover transition-transform duration-700 group-hover:scale-102"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent pointer-events-none" />
                   </div>
@@ -424,7 +425,7 @@ export default function SalesContractWorkflow() {
                 {/* Text */}
                 <div className="flex-1 max-w-md">
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="text-[12px] font-bold text-accent border border-accent/30 bg-accent/10 px-2.5 py-0.5 rounded-full">
+                    <span className="text-small font-bold text-accent border border-accent/30 bg-accent/10 px-2.5 py-0.5 rounded-full">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
@@ -445,7 +446,7 @@ export default function SalesContractWorkflow() {
             <h2 className="text-heading font-black text-text-main mb-3">15-Step Data Flow</h2>
             <p className="text-text-dim text-description max-w-2xl mx-auto">
               Granular flow showing how data moves bidirectionally between{' '}
-              <span className="text-[#009EDB] font-semibold">Salesforce</span> and{' '}
+              <span className="text-brand-blue font-semibold">Salesforce</span> and{' '}
               <span className="text-accent font-semibold">Legitt</span> at each stage of the contract lifecycle.
               Click any step to expand details.
             </p>
@@ -458,12 +459,12 @@ export default function SalesContractWorkflow() {
               <span className="text-text-dim">Legitt</span>
             </div>
             <div className="flex items-center gap-2 text-description">
-              <span className="w-3 h-3 rounded-full bg-[#009EDB] inline-block" />
+              <span className="w-3 h-3 rounded-full bg-brand-blue inline-block" />
               <span className="text-text-dim">Salesforce</span>
             </div>
             <div className="flex items-center gap-2 text-description">
               <ArrowRight size={12} className="text-accent" />
-              <span className="text-text-dim font-mono text-[12px]">Data transfer direction</span>
+              <span className="text-text-dim font-mono text-small">Data transfer direction</span>
             </div>
           </div>
 
@@ -471,7 +472,7 @@ export default function SalesContractWorkflow() {
           <div className="reveal flex flex-wrap justify-center gap-2 mb-14">
             <button
               onClick={() => setActivePhase(null)}
-              className={`text-[11px] font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200 ${
+              className={`text-mini font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200 ${
                 activePhase === null ? 'border-accent text-accent bg-accent/10' : 'border-border text-text-dim hover:border-white/20'
               }`}
             >
@@ -481,7 +482,7 @@ export default function SalesContractWorkflow() {
               <button
                 key={p.name}
                 onClick={() => setActivePhase(activePhase === p.name ? null : p.name)}
-                className={`text-[11px] font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200`}
+                className={`text-mini font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200`}
                 style={
                   activePhase === p.name
                     ? { borderColor: p.color, color: p.color, background: `${p.color}18` }
@@ -529,15 +530,15 @@ export default function SalesContractWorkflow() {
             ].map((obj, i) => (
               <div
                 key={obj.name}
-                className="glass-card rounded-xl p-5 text-center border-border/60 hover:border-[#009EDB]/30 transition-all duration-300 group"
+                className="glass-card rounded-xl p-5 text-center border-border/60 hover:border-brand-blue/30 transition-all duration-300 group"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
-                <div className="w-8 h-8 rounded-lg bg-[#009EDB]/10 border border-[#009EDB]/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                  <Database size={14} className="text-[#009EDB]" />
+                <div className="w-8 h-8 rounded-lg bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <Database size={14} className="text-brand-blue" />
                 </div>
                 <div className="text-description font-bold text-text-main mb-1">{obj.name}</div>
-                <div className="text-[11px] text-text-dim leading-snug mb-2">{obj.desc}</div>
-                <div className="text-[10px] font-mono text-[#009EDB]/70">{obj.fields}</div>
+                <div className="text-mini text-text-dim leading-snug mb-2">{obj.desc}</div>
+                <div className="text-micro font-mono text-brand-blue/70">{obj.fields}</div>
               </div>
             ))}
           </div>
@@ -584,11 +585,11 @@ export default function SalesContractWorkflow() {
                 <div className={`h-16 w-16 rounded-xl bg-white flex items-center justify-center mb-6 shadow-lg shadow-black/20 group-hover:scale-105 transition-transform duration-300 ${integration.name === 'Microsoft Word Online' ? 'p-1.5' : 'p-3'}`}>
                   <img src={integration.img} alt={integration.name} className="max-w-full max-h-full object-contain" />
                 </div>
-                <h3 className="text-[18px] font-black text-text-main mb-3">{integration.name}</h3>
-                <p className="text-[13px] text-text-dim leading-relaxed mb-6 flex-grow">{integration.role}</p>
+                <h3 className="text-title-sm font-black text-text-main mb-3">{integration.name}</h3>
+                <p className="text-regular text-text-dim leading-relaxed mb-6 flex-grow">{integration.role}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {integration.tags.map(tag => (
-                    <span key={tag} className="text-[10px] font-medium px-2 py-1 rounded bg-surface border border-border text-text-dim">
+                    <span key={tag} className="text-micro font-medium px-2 py-1 rounded bg-surface border border-border text-text-dim">
                       {tag}
                     </span>
                   ))}
@@ -619,7 +620,7 @@ export default function SalesContractWorkflow() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {category.items.map((item) => (
-                    <span key={item} className="text-[12px] px-3 py-1 rounded-md bg-surface border border-border text-text-dim font-medium">
+                    <span key={item} className="text-small px-3 py-1 rounded-md bg-surface border border-border text-text-dim font-medium">
                       {item}
                     </span>
                   ))}
@@ -647,7 +648,7 @@ export default function SalesContractWorkflow() {
               return (
                 <div
                   key={c.title}
-                  className="reveal glass-card rounded-2xl p-7 group hover:border-white/10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,136,0.04)]"
+                  className="reveal glass-card rounded-2xl p-7 group hover:border-white/10 transition-all duration-300 hover:shadow-card-glow"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
                   <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent/15 group-hover:scale-110 transition-all duration-300">
@@ -698,11 +699,7 @@ export default function SalesContractWorkflow() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 py-8 text-center text-description text-text-muted">
-        <div className="section-container">
-          Rohit Garg · Lead Product Engineer · {new Date().getFullYear()}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -109,7 +109,7 @@ export default function Hero() {
  </div>
 
  {/* Main heading */}
- <h1 className=" font-extrabold leading-[0.92] tracking-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+ <h1 className=" font-extrabold leading-super-tight tracking-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
  <span className="block text-heading text-text-main mb-1">
  I Build
  </span>

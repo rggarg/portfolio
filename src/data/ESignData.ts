@@ -42,14 +42,14 @@ export const metrics = [
     value: '80%',
     label: 'Workflow Setup Time Saved',
     sub: 'Intelligent auto-routing replaces config',
-    color: 'text-[#a78bfa]',
+    color: 'text-brand-purple',
   },
   {
     icon: FileText,
     value: '5 min',
     label: 'Bulk Operations',
     sub: '2-hour manual process → automated',
-    color: 'text-[#f472b6]',
+    color: 'text-brand-pink',
   },
   {
     icon: Users,

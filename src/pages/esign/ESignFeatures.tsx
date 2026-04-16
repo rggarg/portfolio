@@ -17,7 +17,7 @@ export default function ESignFeatures() {
           </p>
         </div>
 
-        <div className="reveal grid md:grid-cols-[280px,1fr] gap-6 items-start">
+        <div className="reveal grid md:grid-cols-layout-feat gap-6 items-start">
           {/* Feature selector sidebar */}
           <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0">
             {features.map((f, i) => (
@@ -31,7 +31,7 @@ export default function ESignFeatures() {
                 }`}
               >
                 <span
-                  className="text-[11px] font-black tracking-wider flex-shrink-0"
+                  className="text-mini font-black tracking-wider flex-shrink-0"
                   style={{ color: activeFeature === i ? f.color : '#555' }}
                 >
                   {f.number}
@@ -49,7 +49,7 @@ export default function ESignFeatures() {
             {/* Number + phase color */}
             <div className="flex items-center gap-3 mb-5">
               <span
-                className="text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded"
+                className="text-mini font-black tracking-widest uppercase px-2.5 py-1 rounded"
                 style={{
                   color: active.color,
                   background: active.color + '18',
@@ -60,7 +60,7 @@ export default function ESignFeatures() {
               </span>
             </div>
 
-            <h3 className="text-[1.6rem] font-black text-text-main mb-2">{active.title}</h3>
+            <h3 className="text-title-lg font-black text-text-main mb-2">{active.title}</h3>
             <p className="text-description text-text-dim mb-6 italic">{active.tagline}</p>
 
             {/* Bullets */}
@@ -82,7 +82,7 @@ export default function ESignFeatures() {
               }}
             >
               <span
-                className="text-[10px] font-bold tracking-widest uppercase flex-shrink-0 mt-0.5"
+                className="text-micro font-bold tracking-widest uppercase flex-shrink-0 mt-0.5"
                 style={{ color: active.color }}
               >
                 Impact

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { CustomCursor, ScrollProgress } from '../../components/Cursor';
+import Footer from '../../components/Footer';
 
 import ESignHero from './ESignHero';
 import ESignChallenge from './ESignChallenge';
@@ -79,6 +80,9 @@ export default function ESign() {
       <ESignComparison />
       <ESignLearnings />
       <ESignCTA />
+      
+      {/* Universal Footer */}
+      <Footer />
     </div>
   );
 }

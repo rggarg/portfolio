@@ -130,24 +130,25 @@ export const projects = [
  color: colors.accent,
  },
  {
- id: "crm",
+ id: "esign",
  num: "02",
  featured: false,
- title: "CRM Workflow System",
- subtitle: "Sales Operations Platform",
- description: "Full-featured CRM system for managing leads, opportunities, and customer lifecycle with automated workflows, structured pipelines, and real-time data updates.",
+ title: "Legitt AI E-Signature Platform",
+ subtitle: "E-sign Case Study",
+ link: "/esign-platform",
+ description: "Intelligent document analysis, AI-driven workflow automation, and multi-channel signature delivery — reimagining contract execution at scale.",
  contributions: [
- "Lead and opportunity tracking with structured pipelines",
- "Automated workflow engine with notifications",
- "External API integrations and live reporting",
- "Role-based access control and permissions",
+ "Led engineering team and core architecture for 2+ years",
+ "Architected Python AI microservices and robust Node.js APIs",
+ "Built complex multi-channel signature delivery systems",
+ "Implemented dynamic SQL queries and WebSockets for real-time tracking"
  ],
  impact: [
- "Enhanced visibility into sales processes across teams",
- "Improved efficiency for sales and operations teams",
+ "Drove API cost reduction by 70% via strategic caching layers",
+ "Boosted signature completion rate by 40% with optimized workflows"
  ],
- stack: ["Node.js", "React.js", "MongoDB", "REST APIs", "Express.js"],
- color: "#60a5fa" /* no matching tailwind theme color */,
+ stack: ["React.js", "Node.js", "SQL", "Python", "OpenAI GPT"],
+ color: colors['brand-light-blue'],
  },
  {
  id: "sales-contract-workflow",

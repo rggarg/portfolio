@@ -21,7 +21,7 @@ export default function ESignLearnings() {
           <div className="reveal-left">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-accent text-[13px]">💡</span>
+                <span className="text-accent text-regular">💡</span>
               </div>
               <h3 className="text-title font-black text-text-main">Key Takeaways</h3>
             </div>
@@ -43,8 +43,8 @@ export default function ESignLearnings() {
           {/* If I Could Do It Again */}
           <div className="reveal">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-[#a78bfa]/10 border border-[#a78bfa]/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-[#a78bfa] text-[13px]">🔁</span>
+              <div className="w-8 h-8 rounded-lg bg-brand-purple/10 border border-brand-purple/20 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-purple text-regular">🔁</span>
               </div>
               <h3 className="text-title font-black text-text-main">If I Could Do It Again</h3>
             </div>
@@ -52,9 +52,9 @@ export default function ESignLearnings() {
               {wouldDo.map((l, i) => (
                 <div
                   key={i}
-                  className="glass-card rounded-xl p-5 border-border/60 hover:border-[#a78bfa]/30 transition-all duration-300 group"
+                  className="glass-card rounded-xl p-5 border-border/60 hover:border-brand-purple/30 transition-all duration-300 group"
                 >
-                  <h4 className="text-description font-bold text-text-main mb-2 group-hover:text-[#a78bfa] transition-colors">
+                  <h4 className="text-description font-bold text-text-main mb-2 group-hover:text-brand-purple transition-colors">
                     {l.title}
                   </h4>
                   <p className="text-description text-text-dim leading-relaxed">{l.desc}</p>

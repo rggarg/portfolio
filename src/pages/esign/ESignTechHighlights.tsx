@@ -21,7 +21,7 @@ export default function ESignTechHighlights() {
             return (
               <div
                 key={h.title}
-                className="reveal glass-card rounded-2xl p-7 group hover:border-white/10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,136,0.04)]"
+                className="reveal glass-card rounded-2xl p-7 group hover:border-white/10 transition-all duration-300 hover:shadow-card-glow"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent/15 group-hover:scale-110 transition-all duration-300">

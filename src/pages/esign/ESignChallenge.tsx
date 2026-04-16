@@ -22,14 +22,14 @@ export default function ESignChallenge() {
           <div className="reveal-left">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-red-400 text-[12px] font-bold">✕</span>
+                <span className="text-red-400 text-small font-bold">✕</span>
               </div>
               <h3 className="text-title font-black text-text-main">The Gaps</h3>
             </div>
             <div className="space-y-4">
               {problems.map((p, i) => (
                 <div key={i} className="flex items-start gap-3 text-text-dim text-description leading-relaxed">
-                  <span className="w-5 h-5 rounded-full border border-red-500/40 text-red-400 flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-full border border-red-500/40 text-red-400 flex items-center justify-center text-micro flex-shrink-0 mt-0.5">
                     ✕
                   </span>
                   {p}
@@ -42,7 +42,7 @@ export default function ESignChallenge() {
           <div className="reveal">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-accent text-[12px] font-bold">✓</span>
+                <span className="text-accent text-small font-bold">✓</span>
               </div>
               <h3 className="text-title font-black text-text-main">Our Approach</h3>
             </div>
@@ -60,7 +60,7 @@ export default function ESignChallenge() {
         {/* Core challenge callout */}
         <div className="reveal mt-16">
           <div className="glass-card rounded-2xl p-8 border-accent/10 bg-accent/[0.02]">
-            <p className="text-[11px] tracking-widest uppercase text-accent mb-3 font-bold">The Core Engineering Challenge</p>
+            <p className="text-mini tracking-widest uppercase text-accent mb-3 font-bold">The Core Engineering Challenge</p>
             <p className="text-subtitle text-text-main leading-relaxed font-medium">
               "How do you build a workflow orchestration system that handles complex, multi-department approval chains
               — where routing decisions depend on dynamic document analysis — while maintaining performance, reliability,

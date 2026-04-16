@@ -40,8 +40,8 @@ export default function ESignCTA() {
                   style={{ animationDelay: `${i * 80}ms` }}
                 >
                   <Icon size={18} className="text-accent mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                  <p className="text-[12px] font-bold text-text-main mb-0.5">{e.label}</p>
-                  <p className="text-[11px] text-text-dim">{e.sub}</p>
+                  <p className="text-small font-bold text-text-main mb-0.5">{e.label}</p>
+                  <p className="text-mini text-text-dim">{e.sub}</p>
                 </div>
               );
             })}
@@ -67,13 +67,6 @@ export default function ESignCTA() {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="border-t border-border/40 mt-24 pt-8 text-center text-description text-text-muted">
-        <div className="section-container">
-          Rohit Garg · Lead Product Engineer · {new Date().getFullYear()}
-        </div>
-      </footer>
     </section>
   );
 }

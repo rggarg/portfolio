@@ -25,7 +25,7 @@ export default function ESignArchitecture() {
                 >
                   {/* Layer label */}
                   <div
-                    className="w-32 flex-shrink-0 text-[11px] font-bold tracking-widest uppercase text-right"
+                    className="w-32 flex-shrink-0 text-mini font-bold tracking-widest uppercase text-right"
                     style={{ color: layer.color }}
                   >
                     {layer.label}
@@ -36,7 +36,7 @@ export default function ESignArchitecture() {
 
                   {/* Card */}
                   <div
-                    className="flex-1 flex items-center justify-between px-5 py-3.5 rounded-xl border transition-all duration-300 group-hover:scale-[1.01]"
+                    className="flex-1 flex items-center justify-between px-5 py-3.5 rounded-xl border transition-all duration-300 group-hover:scale-101"
                     style={{
                       borderColor: layer.color + '30',
                       background: layer.color + '08',
@@ -44,7 +44,7 @@ export default function ESignArchitecture() {
                   >
                     <div>
                       <span className="text-subtitle font-bold text-text-main">{layer.tech}</span>
-                      <span className="text-[12px] text-text-dim ml-3 hidden sm:inline">{layer.desc}</span>
+                      <span className="text-small text-text-dim ml-3 hidden sm:inline">{layer.desc}</span>
                     </div>
                     <div
                       className="w-2 h-2 rounded-full flex-shrink-0 animate-pulse-slow"
@@ -62,7 +62,7 @@ export default function ESignArchitecture() {
 
             {/* Connector arrows between layers */}
             <div className="flex justify-center mt-4">
-              <div className="text-[11px] text-text-muted tracking-widest uppercase font-mono">
+              <div className="text-mini text-text-muted tracking-widest uppercase font-mono">
                 ↕ bidirectional data flow
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function ESignArchitecture() {
 
         {/* Flow summary banner */}
         <div className="reveal mb-16">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-[12px] font-mono">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-small font-mono">
             {[
               { label: 'React.js', color: '#61dafb' },
               { label: '→', color: '#444' },
@@ -110,7 +110,7 @@ export default function ESignArchitecture() {
                 {category.items.map((item) => (
                   <span
                     key={item}
-                    className="text-[12px] px-3 py-1 rounded-md bg-surface border border-border text-text-dim font-medium"
+                    className="text-small px-3 py-1 rounded-md bg-surface border border-border text-text-dim font-medium"
                   >
                     {item}
                   </span>

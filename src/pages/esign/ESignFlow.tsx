@@ -20,12 +20,12 @@ function FlowCard({
       <div className={`flex-1 ${isLeft ? 'text-left' : 'text-right'}`}>
         <button
           onClick={() => setOpen(!open)}
-          className="w-full glass-card rounded-xl p-5 text-left group hover:border-white/10 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,136,0.04)]"
+          className="w-full glass-card rounded-xl p-5 text-left group hover:border-white/10 transition-all duration-300 hover:shadow-card-glow"
           style={{ textAlign: isLeft ? 'left' : 'right' }}
         >
           <div className={`flex items-center gap-2 mb-2 ${isLeft ? '' : 'justify-end'}`}>
             <span
-              className="inline-flex items-center text-[11px] font-bold tracking-wider uppercase px-2 py-0.5 rounded"
+              className="inline-flex items-center text-mini font-bold tracking-wider uppercase px-2 py-0.5 rounded"
               style={{
                 color: step.phaseColor,
                 background: `${step.phaseColor}18`,
@@ -99,7 +99,7 @@ export default function ESignFlow() {
         <div className="reveal flex flex-wrap justify-center gap-2 mb-14 mt-8">
           <button
             onClick={() => setActivePhase(null)}
-            className={`text-[11px] font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200 ${
+            className={`text-mini font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200 ${
               activePhase === null
                 ? 'border-accent text-accent bg-accent/10'
                 : 'border-border text-text-dim hover:border-white/20'
@@ -111,7 +111,7 @@ export default function ESignFlow() {
             <button
               key={p.name}
               onClick={() => setActivePhase(activePhase === p.name ? null : p.name)}
-              className="text-[11px] font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200"
+              className="text-mini font-bold tracking-wider uppercase px-3 py-1.5 rounded-full border transition-all duration-200"
               style={
                 activePhase === p.name
                   ? { borderColor: p.color, color: p.color, background: `${p.color}18` }
@@ -128,12 +128,12 @@ export default function ESignFlow() {
           {flowPhases.map((p) => (
             <div key={p.name} className="flex items-center gap-2 text-description">
               <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: p.color }} />
-              <span className="text-text-dim text-[12px]">{p.name}</span>
+              <span className="text-text-dim text-small">{p.name}</span>
             </div>
           ))}
           <div className="flex items-center gap-2 text-description">
             <ArrowRight size={12} className="text-accent" />
-            <span className="text-text-dim font-mono text-[12px]">Click to expand</span>
+            <span className="text-text-dim font-mono text-small">Click to expand</span>
           </div>
         </div>
 

@@ -31,14 +31,14 @@ export const metrics = [
     value: '100+',
     label: 'Agreements / Month',
     sub: 'Consistently processed at scale',
-    color: 'text-[#60a5fa]',
+    color: 'text-brand-light-blue',
   },
   {
     icon: TrendingUp,
     value: '3K+',
     label: 'Total Agreements Processed',
     sub: 'Since platform went live',
-    color: 'text-[#f472b6]',
+    color: 'text-brand-pink',
   },
   {
     icon: BarChart3,

@@ -76,7 +76,7 @@ export default function Achievements() {
  </div>
 
  {/* Bottom CTA card */}
- <div className="mt-6 rounded-2xl p-6 reveal delay-300 bg-gradient-to-br from-accent/8 to-[#00ccaa]/4 border border-accent/20">
+ <div className="mt-6 rounded-2xl p-6 reveal delay-300 bg-gradient-to-br from-accent/8 to-brand-teal/4 border border-accent/20">
  <div className=" font-bold text-heading text-accent mb-2">Ready to build something great?</div>
  <p className="text-text-dim text-subtitle leading-relaxed mb-4">
  I'm open to challenging engineering roles, leadership opportunities, and interesting enterprise products.

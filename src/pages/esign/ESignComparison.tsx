@@ -25,10 +25,10 @@ export default function ESignComparison() {
         </div>
 
         <div className="reveal overflow-x-auto">
-          <table className="w-full min-w-[640px] text-left border-collapse">
+          <table className="w-full min-w-640 text-left border-collapse">
             <thead>
               <tr>
-                <th className="pb-4 pr-4 text-[12px] font-bold tracking-widest uppercase text-text-dim w-[40%]">
+                <th className="pb-4 pr-4 text-small font-bold tracking-widest uppercase text-text-dim w-2/5">
                   Feature
                 </th>
                 {comparison.competitors.map((c) => (
@@ -48,7 +48,7 @@ export default function ESignComparison() {
                         {c.name}
                       </span>
                       {c.isUs && (
-                        <span className="text-[10px] tracking-widest text-accent/60 uppercase font-bold">
+                        <span className="text-micro tracking-widest text-accent/60 uppercase font-bold">
                           This Product
                         </span>
                       )}
@@ -81,7 +81,7 @@ export default function ESignComparison() {
         </div>
 
         {/* Legend */}
-        <div className="reveal mt-6 flex flex-wrap justify-center gap-6 text-[12px]">
+        <div className="reveal mt-6 flex flex-wrap justify-center gap-6 text-small">
           <div className="flex items-center gap-2 text-text-dim">
             <CheckCircle size={14} className="text-accent" /> Supported
           </div>
