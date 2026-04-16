@@ -15,9 +15,9 @@ export default {
         'accent-dim': '#00cc6a',
         'accent-glow': 'rgba(0,255,136,0.15)',
         amber: '#f5a623',
-        'text-main': '#f0f0ea',
-        'text-dim': '#777',
-        'text-muted': '#444',
+        'text-main': '#fff',
+        'text-dim': '#f0f0ea',
+        'text-muted': '#777',
       },
       fontFamily: {
         sans: ['"Cabinet Grotesk"', 'sans-serif'],

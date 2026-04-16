@@ -79,7 +79,7 @@ export default function ESignArchitecture() {
               { label: '→', color: '#444' },
               { label: 'Python AI Workers', color: '#a78bfa' },
               { label: '→', color: '#444' },
-              { label: 'MongoDB', color: '#47a248' },
+              { label: 'SQL', color: '#47a248' },
               { label: '↔', color: '#444' },
               { label: 'Email / SMS', color: '#f472b6' },
             ].map((item, i) => (

@@ -158,7 +158,7 @@ export const flowSteps: ESignFlowStep[] = [
     phaseColor: '#fb923c',
     icon: Database,
     title: 'Document Storage & Webhook Dispatch',
-    desc: 'Executed documents are stored in MongoDB with metadata. External systems are notified via the comprehensive webhook system for downstream integrations (HR, ERP, CRM).',
+    desc: 'Executed documents are stored in SQL with metadata. External systems are notified via the comprehensive webhook system for downstream integrations (HR, ERP, CRM).',
   },
 ];
 
@@ -266,7 +266,7 @@ export const archLayers = [
   },
   {
     label: 'Database',
-    tech: 'MongoDB',
+    tech: 'SQL',
     color: '#47a248',
     desc: 'Document metadata, workflow state, audit trail',
   },
@@ -282,7 +282,7 @@ export const archLayers = [
 export const techStack = [
   { category: 'Frontend', items: ['React.js', 'JavaScript', 'WebSockets'] },
   { category: 'Backend', items: ['Node.js', 'Express.js', 'REST APIs', 'Webhooks'] },
-  { category: 'Database', items: ['MongoDB', 'Event Sourcing', 'Workflow State Machine'] },
+  { category: 'Database', items: ['SQL', 'Event Sourcing', 'Workflow State Machine'] },
   { category: 'AI / ML', items: ['OpenAI GPT Models', 'Custom-Trained Models', 'Python Microservices', 'Async Queue'] },
   { category: 'Delivery', items: ['Email Gateway', 'SMS Gateway (Multi-Provider)', 'Global Fallback Routing'] },
   { category: 'Infrastructure', items: ['Cloud Hosting', 'Message Queue', 'Caching Layer', 'Audit Logging'] },

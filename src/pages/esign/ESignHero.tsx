@@ -60,7 +60,7 @@ export default function ESignHero() {
             className="animate-fade-up flex flex-wrap justify-center gap-2 mb-12"
             style={{ animationDelay: '0.15s' }}
           >
-            {['React.js', 'Node.js', 'MongoDB', 'Python', 'OpenAI GPT', 'Custom AI Models', 'WebSockets', 'SMS Gateway'].map(
+            {['React.js', 'Node.js', 'SQL', 'Python', 'OpenAI GPT', 'Custom AI Models', 'WebSockets', 'SMS Gateway'].map(
               (tag) => (
                 <span
                   key={tag}
