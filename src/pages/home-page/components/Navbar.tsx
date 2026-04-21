@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { personalInfo } from '../../../data/portfolio';
 
 const navLinks = [
- { label: 'About', href: '#about' },
  { label: 'Skills', href: '#skills' },
  { label: 'Experience', href: '#experience' },
  { label: 'Projects', href: '#projects' },
+ { label: 'Achievements', href: '#achievements' },
  { label: 'Contact', href: '#contact' },
 ];
 

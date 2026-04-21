@@ -12,15 +12,15 @@ export const personalInfo = {
  linkedin: "https://linkedin.com/in/rggarg",
  twitter: "https://x.com/Rohit18843213",
  resume: "https://drive.google.com/file/d/1Pk_Lj1WYrM8FdgudXnVgTGIXI99AL3x8/view",
- bio: "Lead Product Engineer with deep expertise in the MERN stack and cloud-native AWS architectures. I specialize in building scalable, high-performance enterprise web applications and AI-driven products - from architecture through deployment.",
- shortBio: "3+ years shipping production-grade, AI-powered enterprise platforms. I own problems end-to-end: system design, API performance, team leadership.",
+ bio: "Lead Product Engineer at Legitt AI, with 3+ years building enterprise-grade, AI-powered platforms from the ground up. I own products end-to-end — from system architecture and API design through multi-region deployment and team leadership.",
+ shortBio: "3+ years shipping production-grade AI platforms at Legitt AI. Full ownership: system design → deployment → team leadership.",
 };
 
 export const stats = [
  { value: "3+", label: "Years Experience", suffix: "" },
-//  { value: "50", label: "API Speed Boost", suffix: "%" },
- { value: "4+", label: "Enterprise Products", suffix: "" },
- { value: "100", label: "Team Productivity", suffix: "%" },
+ { value: "4", label: "Products Shipped", suffix: "" },
+ { value: "1K+", label: "Contracts / Day", suffix: "" },
+ { value: "4", label: "Global Regions", suffix: "" },
 ];
 
 export const skills = [
@@ -88,19 +88,34 @@ export const techLogos = [
 export const experience = [
  {
  role: "Lead Product Engineer",
- company: "Enterprise Tech",
+ company: "Legitt AI",
  period: "Feb 2025 – Present",
  type: "Full-time",
  current: true,
- description: "Leading architecture and development of an AI-driven enterprise CLM platform. Defining long-term technical strategy and driving key engineering decisions across the stack.",
+ description: "Leading architecture and development of the complete Legitt AI platform — including the CLM, collaborative editor, e-signature flows, and enterprise integrations. Owning long-term technical strategy and all major engineering decisions.",
  achievements: [
-//  { text: "Reduced API response time by 50% through targeted profiling, caching, and query optimization", highlight: "50% faster APIs" },
- { text: "Led architecture of AI-powered Contract Lifecycle Management platform used by enterprise clients", highlight: "AI Enterprise Platform" },
- { text: "Implemented monitoring, logging, and alerting infrastructure ensuring system reliability at scale", highlight: "99.9% Uptime" },
- { text: "Mentored junior developers through structured code reviews, improving team velocity significantly", highlight: "Team Leadership" },
- { text: "Collaborated with cross-functional teams to deliver complex features end-to-end", highlight: "Cross-functional" },
+ { text: "Architected and shipped the entire CLM platform from scratch — 1K+ contracts/day, deployed across 4 global regions (USA, UAE, Europe, India)", highlight: "1K+ Contracts/Day" },
+ { text: "Built custom TipTap collaborative editor with redlining, real-time collaboration, and DOCX ↔ PDF format conversion", highlight: "Custom Editor" },
+ { text: "Delivered SOC2 Type II, GDPR, and HIPAA compliance — all implemented and certified during tenure", highlight: "SOC2 · GDPR · HIPAA" },
+ { text: "Integrated Salesforce (bidirectional sync), MS Word Online (Office.js), and Okta SSO/SAML for enterprise clients", highlight: "Enterprise Integrations" },
+ { text: "Led and mentored a team of 10–12 engineers across platform features, code reviews, and architecture decisions", highlight: "Team of 10–12" },
  ],
- stack: ["Node.js", "React.js", "MongoDB", "AWS", "Express.js", "AI/ML"],
+ stack: ["React.js", "TipTap", "Node.js", "MySQL", "MongoDB", "Redis", "AWS", "Salesforce", "Okta", "OpenAI", "Gemini"],
+ },
+ {
+ role: "Product Engineer",
+ company: "Legitt AI",
+ period: "2022 – Feb 2025",
+ type: "Full-time",
+ current: false,
+ description: "Built foundational platform modules and core infrastructure for the Legitt AI contract management system. Progressed from backend engineering to owning full product features end-to-end.",
+ achievements: [
+ { text: "Built the invoicing and financial workflow engine with dynamic tax calculation, PDF generation, and multi-currency support", highlight: "Invoicing Engine" },
+ { text: "Developed the multi-party e-signature orchestration system — sequential/parallel signing with SMS, email, and WhatsApp delivery", highlight: "E-Signature Platform" },
+ { text: "Implemented the sales contract workflow integrating Salesforce Opportunities through AI review and signature collection", highlight: "Sales Flow" },
+ { text: "Established the dual-database architecture (MySQL + MongoDB) and Redis caching strategy still used at scale today", highlight: "Core Architecture" },
+ ],
+ stack: ["Node.js", "React.js", "MongoDB", "MySQL", "Redis", "AWS", "Express.js", "Socket.io"],
  },
 ];
 
@@ -196,13 +211,6 @@ export const projects = [
 ];
 
 export const achievements = [
- {
- icon: "⚡",
- title: "50% API Performance Improvement",
- description: "Reduced API response time through targeted profiling, query optimization, caching layers, and connection pooling - delivering measurably faster user experiences at scale.",
- metric: "50%",
- metricLabel: "Faster",
- },
  {
  icon: "🚀",
  title: "AI Enterprise Products Shipped",
