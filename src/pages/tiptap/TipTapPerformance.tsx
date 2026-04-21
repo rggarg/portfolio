@@ -11,7 +11,7 @@ export default function TipTapPerformance() {
             Performance & Auto-Save
           </h2>
           <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
-            Handling 50–100+ page contracts in the browser requires careful optimization at every layer —
+            Handling 50–100+ page contracts in the browser requires careful optimization at every layer -
             from ProseMirror transaction batching to Redis-buffered saves.
           </p>
         </div>
@@ -67,8 +67,8 @@ export default function TipTapPerformance() {
               <h3 className="text-title-sm font-black text-text-main mb-5">Why Redis as Write Buffer?</h3>
               <div className="space-y-3">
                 {[
-                  { emoji: '⚡', title: 'Sub-millisecond writes', desc: 'Every debounced save hits Redis first — instantly acknowledged.' },
-                  { emoji: '🛡️', title: 'DB protection', desc: 'MySQL/MongoDB only get flushed every few minutes — not on every keystroke.' },
+                  { emoji: '⚡', title: 'Sub-millisecond writes', desc: 'Every debounced save hits Redis first - instantly acknowledged.' },
+                  { emoji: '🛡️', title: 'DB protection', desc: 'MySQL/MongoDB only get flushed every few minutes - not on every keystroke.' },
                   { emoji: '🔄', title: 'TTL + AOF durability', desc: 'Redis AOF persistence means no data loss even if the process crashes.' },
                   { emoji: '📈', title: 'Horizontal scale', desc: 'Redis pub/sub enables multiple Node.js instances to share a broadcast bus.' },
                 ].map((item, i) => (
@@ -119,7 +119,7 @@ editor.chain()
             <div>
               <h4 className="text-small font-bold text-text-main mb-2">Crash Recovery Strategy</h4>
               <p className="text-mini text-text-dim leading-relaxed">
-                No client-side storage (LocalStorage / IndexedDB). The server — Redis + Database — is the
+                No client-side storage (LocalStorage / IndexedDB). The server - Redis + Database - is the
                 single source of truth. On reconnect, the client fetches the latest version from the server.
                 Every save creates a new version entry: metadata in MySQL, content blob in MongoDB. Users can
                 roll back to any previous save point.

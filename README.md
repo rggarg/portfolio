@@ -1,4 +1,4 @@
-# 🚀 Lead Product Engineer — Portfolio
+# 🚀 Lead Product Engineer - Portfolio
 
 A world-class, fully responsive portfolio built with **Vite + React + Tailwind CSS**.
 
@@ -64,13 +64,13 @@ npm run build
 **All your content is in one file: `src/data/portfolio.js`**
 
 Update these fields:
-- `personalInfo` — name, email, social links, bio
-- `stats` — your key numbers
-- `skills` — your expertise areas
-- `experience` — work history
-- `projects` — your projects
-- `achievements` — key wins
-- `differentiators` — what sets you apart
+- `personalInfo` - name, email, social links, bio
+- `stats` - your key numbers
+- `skills` - your expertise areas
+- `experience` - work history
+- `projects` - your projects
+- `achievements` - key wins
+- `differentiators` - what sets you apart
 
 ---
 
@@ -84,7 +84,7 @@ Update these fields:
 - **Animated skill bars** triggered on scroll
 - **Glass morphism cards** with hover glow effects
 - **Scroll-reveal animations** on all sections
-- **Mobile-first responsive** — works on all screen sizes
+- **Mobile-first responsive** - works on all screen sizes
 - **Active nav highlighting** based on current section
 
 ---
@@ -113,10 +113,10 @@ npm run build && npm run deploy
 ---
 
 ## 🔧 Tech Stack
-- **Vite** — lightning-fast build tool
-- **React 18** — component architecture
-- **Tailwind CSS 3** — utility-first styling
-- **Google Fonts** — Syne (display) + JetBrains Mono
+- **Vite** - lightning-fast build tool
+- **React 18** - component architecture
+- **Tailwind CSS 3** - utility-first styling
+- **Google Fonts** - Syne (display) + JetBrains Mono
 
 ---
 

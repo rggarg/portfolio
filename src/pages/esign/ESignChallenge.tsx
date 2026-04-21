@@ -13,7 +13,7 @@ export default function ESignChallenge() {
           </h2>
           <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
             Existing tools like DocuSign and Adobe Sign solve the basic problem of getting documents signed digitally
-            — but they treat documents as black boxes, leaving critical intelligence on the table.
+            - but they treat documents as black boxes, leaving critical intelligence on the table.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export default function ESignChallenge() {
             <p className="text-mini tracking-widest uppercase text-accent mb-3 font-bold">The Core Engineering Challenge</p>
             <p className="text-subtitle text-text-main leading-relaxed font-medium">
               "How do you build a workflow orchestration system that handles complex, multi-department approval chains
-              — where routing decisions depend on dynamic document analysis — while maintaining performance, reliability,
+              - where routing decisions depend on dynamic document analysis - while maintaining performance, reliability,
               and user experience competitive with billion-dollar incumbents?"
             </p>
           </div>

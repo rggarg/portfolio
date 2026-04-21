@@ -50,12 +50,12 @@ export default function TipTapWhyTipTap() {
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-px w-16" style={{ background: 'rgba(0,204,170,0.3)' }} />
             <span className="text-description font-bold tracking-widest uppercase" style={{ color: '#00ccaa' }}>
-              TipTap — The Winner
+              TipTap - The Winner
             </span>
             <span className="h-px w-16" style={{ background: 'rgba(0,204,170,0.3)' }} />
           </div>
           <p className="text-text-dim text-description max-w-xl mx-auto">
-            Built on ProseMirror — the same foundation as Notion and Google Docs — TipTap provided
+            Built on ProseMirror - the same foundation as Notion and Google Docs - TipTap provided
             the right balance of power, extensibility, and zero licensing cost.
           </p>
         </div>

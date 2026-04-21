@@ -52,7 +52,7 @@ export default function ESignHero() {
             Reimagining contract execution with{' '}
             <span className="text-text-main font-semibold">intelligent document analysis</span>,{' '}
             <span className="text-text-main font-semibold">AI-driven workflow automation</span>, and{' '}
-            <span className="text-text-main font-semibold">multi-channel signature delivery</span> — competing with DocuSign and Adobe Sign.
+            <span className="text-text-main font-semibold">multi-channel signature delivery</span> - competing with DocuSign and Adobe Sign.
           </p>
 
           {/* Tags */}

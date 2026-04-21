@@ -112,7 +112,7 @@ export default function Skills() {
  </h2>
  </div>
  <p className="text-text-dim max-w-sm leading-relaxed reveal delay-200 lg:text-right">
- A balanced combination of technical depth, architectural thinking, and product mindset — built over 3+ years of real enterprise delivery.
+ A balanced combination of technical depth, architectural thinking, and product mindset - built over 3+ years of real enterprise delivery.
  </p>
  </div>
 

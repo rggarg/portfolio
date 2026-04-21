@@ -17,7 +17,7 @@ export default function InvoicingCTA() {
           <p className="text-description text-text-dim leading-relaxed mb-10">
             Built solo in one month, this system processes 2–3K contracts daily, applies
             intelligent billing logic across three invoice types, and routes everything through a
-            structured approval chain — giving the finance team confidence and speed they never had
+            structured approval chain - giving the finance team confidence and speed they never had
             before. The platform continues to run reliably, handling every billing cycle without
             manual intervention.
           </p>

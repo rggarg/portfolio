@@ -8,7 +8,7 @@ export default function ESignArchitecture() {
           <p className="section-label justify-center">Architecture</p>
           <h2 className="text-heading font-black text-text-main mb-3">System Architecture</h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
-            MERN stack frontend + Python AI microservices — designed for scale, observability, and developer extensibility.
+            MERN stack frontend + Python AI microservices - designed for scale, observability, and developer extensibility.
           </p>
         </div>
 

@@ -72,7 +72,7 @@ export default function TipTapMetrics() {
             <p className="text-mini text-text-dim max-w-2xl mx-auto mt-4 leading-relaxed">
               Completing a draft auto-triggers the approval routing engine. Final approval optionally
               auto-dispatches the signature workflow. Once fully signed, the document is locked, a PDF
-              is generated, and an immutable audit record is created — all without user intervention.
+              is generated, and an immutable audit record is created - all without user intervention.
             </p>
           </div>
         </div>

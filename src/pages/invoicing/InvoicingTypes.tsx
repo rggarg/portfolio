@@ -9,7 +9,7 @@ export default function InvoicingTypes() {
           <h2 className="text-heading font-black text-text-main mb-3">3 Invoice Types Handled</h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
             The engine classifies every contract at runtime and applies the correct billing
-            logic — no manual intervention required.
+            logic - no manual intervention required.
           </p>
         </div>
 

@@ -47,12 +47,12 @@ export default function InvoicingHero() {
             className="animate-fade-up text-subtitle text-text-dim max-w-3xl mx-auto leading-relaxed mb-10"
             style={{ animationDelay: '0.1s' }}
           >
-            A fully automated invoice generation pipeline — syncing{' '}
+            A fully automated invoice generation pipeline - syncing{' '}
             <span className="text-text-main font-semibold">2–3K Salesforce contracts daily</span>,
             running a{' '}
             <span className="text-text-main font-semibold">rule-based invoice engine</span>, and
             managing end-to-end{' '}
-            <span className="text-text-main font-semibold">approval workflows</span> — reducing
+            <span className="text-text-main font-semibold">approval workflows</span> - reducing
             invoice generation from weeks to minutes for an enterprise finance team.
           </p>
 

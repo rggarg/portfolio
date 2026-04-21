@@ -131,7 +131,7 @@ export default function InvoicingFlow() {
           <p className="section-label justify-center">Architecture</p>
           <h2 className="text-heading font-black text-text-main mb-3">9-Step Invoice Workflow</h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
-            End-to-end data flow — from the daily{' '}
+            End-to-end data flow - from the daily{' '}
             <span className="text-brand-blue font-semibold">Salesforce sync</span> through the{' '}
             <span className="text-accent font-semibold">invoice engine</span> and{' '}
             <span className="text-amber font-semibold">finance approval</span> to the final SFDC

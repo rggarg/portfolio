@@ -194,7 +194,7 @@ export default function Projects() {
  <span className="accent-gradient">that matters</span>
  </h2>
  <p className="text-text-dim max-w-lg leading-relaxed mb-16 reveal delay-200">
- Enterprise-grade systems delivered end-to-end — from architecture and API design through deployment and monitoring.
+ Enterprise-grade systems delivered end-to-end - from architecture and API design through deployment and monitoring.
  </p>
 
  {/* Featured project */}

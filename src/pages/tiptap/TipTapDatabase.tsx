@@ -11,7 +11,7 @@ export default function TipTapDatabase() {
             Dual-Database Architecture
           </h2>
           <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
-            MySQL and MongoDB aren't interchangeable here — each handles exactly what it's best at.
+            MySQL and MongoDB aren't interchangeable here - each handles exactly what it's best at.
             The split between transactional metadata and flexible JSON blobs is a deliberate design choice.
           </p>
         </div>

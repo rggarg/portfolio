@@ -23,11 +23,11 @@ ________________________________________
 2. THE CHALLENGE
 Title: "Beyond Digital Signatures: Building Intelligence into Contract Workflows"
 Problem Statement: Existing e-signature tools (DocuSign, Adobe Sign) solve the basic problem of getting documents signed digitally, but they treat documents as black boxes. Organizations face critical gaps:
-•	No Document Intelligence: Users upload contracts without understanding what's inside—missing clauses, hidden obligations, unfavorable financial terms go unnoticed until it's too late
+•	No Document Intelligence: Users upload contracts without understanding what's inside-missing clauses, hidden obligations, unfavorable financial terms go unnoticed until it's too late
 •	Limited Communication Channels: Email-only signature requests exclude users in SMS-first markets or mobile-heavy workflows
 •	Manual Bulk Operations: HR teams manually duplicate documents for each new hire; procurement teams can't efficiently handle vendor agreements at scale
 •	Rigid Linear Workflows: Cross-departmental approvals require custom development; no intelligent routing based on document content or risk level
-The Core Challenge: How do you build a workflow orchestration system that handles complex, multi-department approval chains—where routing decisions depend on dynamic document analysis—while maintaining performance, reliability, and user experience competitive with billion-dollar incumbents?
+The Core Challenge: How do you build a workflow orchestration system that handles complex, multi-department approval chains-where routing decisions depend on dynamic document analysis-while maintaining performance, reliability, and user experience competitive with billion-dollar incumbents?
 ________________________________________
 3. THE SOLUTION
 Title: "AI-First Architecture Meets Enterprise Workflow Automation"
@@ -106,7 +106,7 @@ Feature 3: Bulk Signing Engine
 2.	Uploads CSV/Excel with signatory data (name, email, phone, custom fields)
 3.	System auto-generates individual documents with mapped data
 4.	Single-click sends all signature requests
-•	Visual: Before/after comparison—manual process (2 hours) vs automated (5 minutes)
+•	Visual: Before/after comparison-manual process (2 hours) vs automated (5 minutes)
 •	Impact: HR teams process 50+ onboarding packets in minutes instead of hours
 Feature 4: Envelope Management
 •	What: Group related documents into single signing session

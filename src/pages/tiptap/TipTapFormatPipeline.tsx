@@ -79,7 +79,7 @@ const exportSteps = [
     icon: '✅',
     label: 'Final PDF',
     sublabel: 'With Signatures',
-    desc: 'Signed, stamped & formatted — ready for distribution',
+    desc: 'Signed, stamped & formatted - ready for distribution',
     color: '#4ade80',
     bg: 'rgba(74,222,128,0.06)',
     border: 'rgba(74,222,128,0.25)',
@@ -156,7 +156,7 @@ function PipelineFlow({
               <div className="text-mini text-text-dim leading-snug px-1">{step.desc}</div>
             </div>
 
-            {/* Horizontal connector — NOT inside step column */}
+            {/* Horizontal connector - NOT inside step column */}
             {i < steps.length - 1 && (
               <div className="flex flex-col items-center justify-start pt-8 flex-shrink-0 mx-1" style={{ width: '36px' }}>
                 {/* Animated dashed line with arrow */}
@@ -200,7 +200,7 @@ export default function TipTapFormatPipeline() {
           </h2>
           <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
             The hardest engineering challenge of the project: losslessly converting between DOCX,
-            TipTap JSON, and PDF — preserving tables, fonts, images, and custom numbering with{' '}
+            TipTap JSON, and PDF - preserving tables, fonts, images, and custom numbering with{' '}
             <span className="text-text-main font-semibold">98%+ visual fidelity</span>.
           </p>
         </div>
@@ -250,7 +250,7 @@ export default function TipTapFormatPipeline() {
                 'Preserves custom list numbering schemes accurately',
                 'Extracts embedded images as usable binary assets',
                 'Section breaks and page layout metadata preserved',
-                'Free, open-source — runs headless on Node.js server',
+                'Free, open-source - runs headless on Node.js server',
               ].map((r, i) => (
                 <div key={i} className="flex items-start gap-2 text-mini text-text-dim">
                   <span style={{ color: '#4ade80' }} className="flex-shrink-0 mt-0.5">✓</span>
@@ -281,11 +281,11 @@ export default function TipTapFormatPipeline() {
             </div>
             <div className="space-y-2">
               {[
-                'Full modern CSS — print media queries, flex, grid all supported',
+                'Full modern CSS - print media queries, flex, grid all supported',
                 'Accurate A4 pagination and page break handling',
                 'Embeds signed signature images into exact field positions',
                 'Applies watermarks, running headers and page footers',
-                "Same Chromium engine as the user's browser — true WYSIWYG",
+                "Same Chromium engine as the user's browser - true WYSIWYG",
               ].map((r, i) => (
                 <div key={i} className="flex items-start gap-2 text-mini text-text-dim">
                   <span style={{ color: '#fb923c' }} className="flex-shrink-0 mt-0.5">✓</span>

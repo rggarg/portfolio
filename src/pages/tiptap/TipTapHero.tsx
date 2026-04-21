@@ -21,7 +21,7 @@ export default function TipTapHero() {
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg">
-        {/* Radial glow — teal */}
+        {/* Radial glow - teal */}
         <div className="absolute inset-0 pointer-events-none" style={{
           background: 'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(0,204,170,0.07) 0%, transparent 70%)'
         }} />

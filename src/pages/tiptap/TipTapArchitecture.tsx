@@ -10,8 +10,8 @@ export default function TipTapArchitecture() {
           <p className="section-label justify-center">System Design</p>
           <h2 className="text-heading font-black text-text-main mb-4">Architecture Overview</h2>
           <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
-            Six distinct layers — from custom TipTap extensions at the top to dual-database persistence at the
-            bottom — each with a deliberate design rationale.
+            Six distinct layers - from custom TipTap extensions at the top to dual-database persistence at the
+            bottom - each with a deliberate design rationale.
           </p>
         </div>
 

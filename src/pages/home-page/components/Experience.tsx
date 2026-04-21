@@ -91,7 +91,7 @@ export default function Experience() {
  <div className="border border-dashed border-border rounded-2xl p-6 flex items-center gap-4">
  <div className="w-2 h-2 rounded-full bg-text-muted animate-blink" />
  <span className="text-text-muted text-description tracking-wider">
- Earlier experience & foundational engineering roles — building the stack from the ground up
+ Earlier experience & foundational engineering roles - building the stack from the ground up
  </span>
  </div>
  </div>

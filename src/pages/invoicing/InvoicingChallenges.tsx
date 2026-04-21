@@ -10,8 +10,8 @@ export default function InvoicingChallenges() {
             Key Technical Challenges I Solved
           </h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
-            As the sole engineer, I owned every layer — from data sync to invoice logic to approval
-            workflows — and built solutions that scale to thousands of contracts daily.
+            As the sole engineer, I owned every layer - from data sync to invoice logic to approval
+            workflows - and built solutions that scale to thousands of contracts daily.
           </p>
         </div>
 

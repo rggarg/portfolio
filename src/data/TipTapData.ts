@@ -31,7 +31,7 @@ export const editorComparison = [
     name: 'Quill',
     verdict: 'Rejected',
     issues: [
-      'Too basic — limited structural customization',
+      'Too basic - limited structural customization',
       'Couldn\'t handle complex contract node structures',
       'No TypeScript support out of the box',
       'Extension ecosystem too narrow for enterprise use',
@@ -42,7 +42,7 @@ export const editorComparison = [
     name: 'CKEditor',
     verdict: 'Rejected',
     issues: [
-      'Per-feature licensing — prohibitively expensive at enterprise scale',
+      'Per-feature licensing - prohibitively expensive at enterprise scale',
       'Advanced features like collaboration locked behind premium tiers',
       'Heavy bundle size affecting load performance',
       'Vendor lock-in with proprietary plugin system',
@@ -55,8 +55,8 @@ export const editorComparison = [
     issues: [
       'Attempted implementation but poor UX under load',
       'Performance degraded on documents >20 pages',
-      'Limited table support — critical for contracts',
-      'Meta deprecated it — community momentum died',
+      'Limited table support - critical for contracts',
+      'Meta deprecated it - community momentum died',
     ],
     color: '#eab308',
   },
@@ -77,12 +77,12 @@ export const tiptapWins = [
   {
     icon: '🆓',
     title: 'Free & Open Source',
-    desc: 'Core version fully functional at zero cost — no per-feature licensing.',
+    desc: 'Core version fully functional at zero cost - no per-feature licensing.',
   },
   {
     icon: '🔌',
     title: 'Infinitely Extensible',
-    desc: 'Built on ProseMirror — custom nodes, marks, and extensions with full control.',
+    desc: 'Built on ProseMirror - custom nodes, marks, and extensions with full control.',
   },
   {
     icon: '🏭',
@@ -92,7 +92,7 @@ export const tiptapWins = [
   {
     icon: '🔷',
     title: 'TypeScript Native',
-    desc: 'Strong typing throughout — essential for a complex enterprise codebase.',
+    desc: 'Strong typing throughout - essential for a complex enterprise codebase.',
   },
   {
     icon: '📖',
@@ -112,7 +112,7 @@ export const archLayerAnnotations = [
     layer: 'TipTap Editor Core',
     color: '#a78bfa',
     explanation:
-      'ProseMirror foundation with a custom document schema. All content is represented as a typed JSON tree — enabling precise, lossless conversion between formats.',
+      'ProseMirror foundation with a custom document schema. All content is represented as a typed JSON tree - enabling precise, lossless conversion between formats.',
   },
   {
     layer: 'Real-time Sync',
@@ -124,7 +124,7 @@ export const archLayerAnnotations = [
     layer: 'Data Persistence',
     color: colors.amber,
     explanation:
-      'Redis acts as a write buffer — absorbing keystrokes before flushing to the database. MySQL stores document metadata and version refs. MongoDB stores the full TipTap JSON blobs.',
+      'Redis acts as a write buffer - absorbing keystrokes before flushing to the database. MySQL stores document metadata and version refs. MongoDB stores the full TipTap JSON blobs.',
   },
   {
     layer: 'DOCX Upload Pipeline',
@@ -148,7 +148,7 @@ export const extensions = [
     color: colors['brand-teal'],
     icon: '📝',
     overview:
-      'Contract-grade track changes built as a custom TipTap node. Every insertion, deletion, or modification is wrapped in a typed node carrying full metadata — who, when, and what changed.',
+      'Contract-grade track changes built as a custom TipTap node. Every insertion, deletion, or modification is wrapped in a typed node carrying full metadata - who, when, and what changed.',
     dataStructure: `{
   type: 'redline',
   attrs: {
@@ -172,7 +172,7 @@ export const extensions = [
       { level: 'Individual Review', desc: 'Navigate change-by-change. Accept or reject each modification in the sidebar.' },
       { level: 'Bulk Operations', desc: '"Accept All" or "Reject All" with a confirmation guard to prevent accidental revert.' },
     ],
-    code: `// Accept change — removes redline wrapper, keeps new content
+    code: `// Accept change - removes redline wrapper, keeps new content
 acceptChange(changeId: string) {
   const { tr, doc } = editor.state;
   doc.descendants((node, pos) => {
@@ -185,7 +185,7 @@ acceptChange(changeId: string) {
   editor.view.dispatch(tr);
 }
 
-// Reject change — reverts to original content
+// Reject change - reverts to original content
 rejectChange(changeId: string) {
   const { tr, doc } = editor.state;
   doc.descendants((node, pos) => {
@@ -199,7 +199,7 @@ rejectChange(changeId: string) {
 }`,
     perf: [
       'Lazy rendering of highlights on large docs (50–100 pages)',
-      'Virtualized redline sidebar — only renders visible items',
+      'Virtualized redline sidebar - only renders visible items',
       'Debounced redline recalculation on scroll',
       'Batched ProseMirror transactions to minimize re-renders',
     ],
@@ -211,7 +211,7 @@ rejectChange(changeId: string) {
     color: colors['brand-purple'],
     icon: '✍️',
     overview:
-      'Signature fields are first-class document nodes — not floating overlays. Each field carries full signer metadata and integrates directly with the downstream signature workflow.',
+      'Signature fields are first-class document nodes - not floating overlays. Each field carries full signer metadata and integrates directly with the downstream signature workflow.',
     dataStructure: `{
   type: 'signatureField',
   attrs: {
@@ -235,7 +235,7 @@ rejectChange(changeId: string) {
       },
       {
         name: 'Slash ( / ) Command',
-        desc: 'Type "/" in the editor to open the block menu. Select "Signature Field" — field inserts at cursor, then reposition via drag.',
+        desc: 'Type "/" in the editor to open the block menu. Select "Signature Field" - field inserts at cursor, then reposition via drag.',
       },
     ],
     integrationSteps: [
@@ -255,21 +255,21 @@ rejectChange(changeId: string) {
     overview:
       'Rather than simultaneous editing (which creates legal compliance risks in contracts), the system implements a single-editor model: one writer has write access at any time, all others view changes in real-time.',
     designDecision:
-      'Contracts require legal precision — simultaneous multi-cursor editing creates ambiguity about the authoritative version. A single-editor model with real-time broadcast ensures a clear chain of custody.',
+      'Contracts require legal precision - simultaneous multi-cursor editing creates ambiguity about the authoritative version. A single-editor model with real-time broadcast ensures a clear chain of custody.',
     permissionFlow: [
       'User B requests edit access while User A is editing',
       'Request routed to server via Socket.io',
       'User A receives in-app notification (+ email)',
-      'User A approves — or system auto-approves after timeout',
+      'User A approves - or system auto-approves after timeout',
       'Write lock transfers to User B',
       'User A\'s view switches to read-only automatically',
       'All changes broadcast in real-time to every connected viewer',
     ],
     benefits: [
-      'Zero merge conflicts — guaranteed by design',
+      'Zero merge conflicts - guaranteed by design',
       'Clear audit trail: who edited what and when',
       'Legal compliance: single source of truth at every moment',
-      'Undo/redo scoped to active editor only — no viewer confusion',
+      'Undo/redo scoped to active editor only - no viewer confusion',
     ],
     dataFlow: 'User Types → TipTap onChange → Debounce (3s) → Socket.io emit → Redis cache → DB flush → Broadcast to viewers',
   },
@@ -306,7 +306,7 @@ export const performanceMetrics = [
 
 export const autoSaveSteps = [
   { n: '01', title: 'User Types', desc: 'Editor onChange fires after each transaction' },
-  { n: '02', title: 'Debounce', desc: '3-second inactivity window — prevents server overload' },
+  { n: '02', title: 'Debounce', desc: '3-second inactivity window - prevents server overload' },
   { n: '03', title: 'Redis Write', desc: 'Content flushed to Redis cache (sub-millisecond)' },
   { n: '04', title: 'DB Flush', desc: 'Redis → MySQL/MongoDB after a few minutes' },
   { n: '05', title: 'Broadcast', desc: 'Live diff sent to all viewers via Socket.io' },
@@ -353,7 +353,7 @@ export const challenges = [
     title: 'Redlining on Large Docs',
     badge: 'Performance',
     problem: 'Documents with 500+ tracked changes caused sluggish re-renders and unacceptable typing latency.',
-    solution: 'Optimized ProseMirror transactions (batching). Lazy rendering of highlights. Virtualized sidebar — only DOM-mounting visible redline items.',
+    solution: 'Optimized ProseMirror transactions (batching). Lazy rendering of highlights. Virtualized sidebar - only DOM-mounting visible redline items.',
     result: 'Smooth editing even at 500+ concurrent tracked changes on 100-page docs.',
     color: colors['brand-purple'],
   },
@@ -399,14 +399,14 @@ export const whatWorked = [
   'Choosing TipTap saved months vs. building on raw ProseMirror',
   'Single-editor model prevented countless merge-conflict bugs in production',
   'Redis caching strategy gave excellent perf without overloading the DB',
-  'LibreOffice was the right DOCX converter — Mammoth.js couldn\'t handle complex tables',
+  'LibreOffice was the right DOCX converter - Mammoth.js couldn\'t handle complex tables',
 ];
 
 export const whatIdoDifferently = [
-  'Start with virtualized rendering from day 1 — retrofitting is painful',
+  'Start with virtualized rendering from day 1 - retrofitting is painful',
   'Consider CRDT (e.g. Yjs) for true simultaneous editing if the business allows it',
   'Build a comprehensive visual regression suite for format conversion much earlier',
-  'Invest in Puppeteer PDF test automation sooner — caught subtle issues late',
+  'Invest in Puppeteer PDF test automation sooner - caught subtle issues late',
 ];
 
 export const futureImprovements = [
@@ -419,7 +419,7 @@ export const futureImprovements = [
 ];
 
 export const skillsGained = [
-  'Deep internals of ProseMirror — transactions, state, schema',
+  'Deep internals of ProseMirror - transactions, state, schema',
   'Real-time collaboration patterns: WebSocket, Redis pub/sub',
   'Document format conversion: DOCX, HTML, Tiptap JSON, PDF',
   'Performance optimization for large DOM structures',

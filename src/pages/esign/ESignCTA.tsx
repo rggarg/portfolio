@@ -24,7 +24,7 @@ export default function ESignCTA() {
             A Product Built to Win Against Industry Giants
           </h2>
           <p className="text-description text-text-dim leading-relaxed mb-10 max-w-2xl mx-auto">
-            I led the complete product engineering of Legitt AI's e-signature platform — from architecture to deployment,
+            I led the complete product engineering of Legitt AI's e-signature platform - from architecture to deployment,
             covering small businesses to enterprise clients globally. The platform competes directly with DocuSign and Adobe Sign
             with features they simply don't offer.
           </p>

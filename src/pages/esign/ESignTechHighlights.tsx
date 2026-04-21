@@ -10,7 +10,7 @@ export default function ESignTechHighlights() {
             What I'm Proud Of
           </h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
-            The hard technical problems I architected and solved as Lead Product Engineer — where design decisions
+            The hard technical problems I architected and solved as Lead Product Engineer - where design decisions
             had direct impact on performance, cost, and user experience.
           </p>
         </div>

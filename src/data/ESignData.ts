@@ -62,17 +62,17 @@ export const metrics = [
 
 /* ─── Problems ────────────────────────────────────────────────────────────── */
 export const problems = [
-  'Documents treated as black boxes — hidden obligations, missing clauses, unfavorable financial terms go unnoticed until it\'s too late.',
+  'Documents treated as black boxes - hidden obligations, missing clauses, unfavorable financial terms go unnoticed until it\'s too late.',
   'Email-only signature requests exclude users in SMS-first markets and mobile-heavy workflows.',
-  'HR and procurement teams manually duplicate documents for each recipient — no bulk operations or automation.',
+  'HR and procurement teams manually duplicate documents for each recipient - no bulk operations or automation.',
   'Rigid, linear approval processes require custom development with no intelligent routing based on document content or risk.',
   'No cross-team visibility into where a document is stuck in the approval or signing pipeline.',
 ];
 
 export const solutions = [
   'AI-powered document review engine instantly surfaces clauses, obligations, financial terms, and compliance risks upon upload.',
-  'Multi-channel delivery (Email + SMS) reaches signatories in any market — first in class for SMS-first regions.',
-  'Bulk signing engine — upload Excel with 100+ signatory records, auto-generate personalized documents, single-click distribution.',
+  'Multi-channel delivery (Email + SMS) reaches signatories in any market - first in class for SMS-first regions.',
+  'Bulk signing engine - upload Excel with 100+ signatory records, auto-generate personalized documents, single-click distribution.',
   'AI-driven workflow engine routes approvals based on financial thresholds, clause changes, and document risk level.',
   'Envelope grouping bundles multiple documents into a single signing session, improving completion rates by ~40%.',
 ];
@@ -102,7 +102,7 @@ export const flowSteps: ESignFlowStep[] = [
     phaseColor: '#00ff88',
     icon: Brain,
     title: 'AI Analysis Engine',
-    desc: 'Hybrid AI layer (OpenAI GPT + custom-trained models) processes the document — extracting clauses, obligations, financial terms, and compliance risks asynchronously via Python microservices.',
+    desc: 'Hybrid AI layer (OpenAI GPT + custom-trained models) processes the document - extracting clauses, obligations, financial terms, and compliance risks asynchronously via Python microservices.',
   },
   {
     id: 3,
@@ -117,7 +117,7 @@ export const flowSteps: ESignFlowStep[] = [
     phase: 'Workflow Configuration',
     phaseColor: '#a78bfa',
     icon: GitBranch,
-    title: 'Workflow Engine — Routing Decision',
+    title: 'Workflow Engine - Routing Decision',
     desc: 'The AI-driven workflow engine determines the approval chain based on document type, risk score, financial thresholds, and clause modifications. Supports parallel (Legal + Finance simultaneously) and sequential (Manager → Director → VP) chains.',
   },
   {
@@ -134,7 +134,7 @@ export const flowSteps: ESignFlowStep[] = [
     phaseColor: '#f472b6',
     icon: MessageSquare,
     title: 'Multi-Channel Signature Dispatch',
-    desc: 'Signature requests dispatched via Email or SMS. SMS delivery reaches field workers, international markets, and mobile-first users — a market-first capability versus DocuSign and Adobe Sign.',
+    desc: 'Signature requests dispatched via Email or SMS. SMS delivery reaches field workers, international markets, and mobile-first users - a market-first capability versus DocuSign and Adobe Sign.',
   },
   {
     id: 7,
@@ -180,7 +180,7 @@ export const features = [
     bullets: [
       'Automated clause detection and extraction across all document types',
       'Missing clause recommendations based on document classification',
-      'Financial terms extraction — payment amounts, penalties, milestones',
+      'Financial terms extraction - payment amounts, penalties, milestones',
       'Compliance alerts for regulatory requirements and standard violations',
       'Obligation identification with deadline extraction',
     ],
@@ -193,8 +193,8 @@ export const features = [
     color: '#a78bfa',
     bullets: [
       'Drag-and-drop visual workflow designer for non-technical users',
-      'Parallel approvals — Legal + Finance sign off simultaneously',
-      'Sequential chains — Manager → Director → VP approval hierarchy',
+      'Parallel approvals - Legal + Finance sign off simultaneously',
+      'Sequential chains - Manager → Director → VP approval hierarchy',
       'AI auto-routing: if financial terms exceed threshold, CFO approver added automatically',
       'State machine design handles 10+ concurrent approval chains per document',
     ],
@@ -220,7 +220,7 @@ export const features = [
     tagline: 'Bundle related documents into a unified signing session',
     color: '#fb923c',
     bullets: [
-      'Group multiple documents — offer letter, NDA, tax forms, benefits enrollment',
+      'Group multiple documents - offer letter, NDA, tax forms, benefits enrollment',
       'Signer completes one session instead of multiple fragmented requests',
       'Single-step tracking for all documents in the envelope',
       'Common use case: employee onboarding, multi-document loan closings',
@@ -234,8 +234,8 @@ export const features = [
     tagline: 'First-in-market SMS signature delivery for mobile-first populations',
     color: '#34d399',
     bullets: [
-      'Email signature links — industry standard with tracking and reminders',
-      'SMS delivery — unique capability not available in DocuSign or Adobe Sign',
+      'Email signature links - industry standard with tracking and reminders',
+      'SMS delivery - unique capability not available in DocuSign or Adobe Sign',
       'Ideal for field workers, international markets, and urgent signature scenarios',
       'Multi-provider SMS strategy with fallback routing for global reach',
       'Automatic delivery channel selection based on recipient region',
@@ -293,11 +293,11 @@ export const techHighlights = [
   {
     icon: Cpu,
     title: 'Hybrid AI Architecture',
-    desc: 'Combined OpenAI\'s general language understanding with custom-trained models for legal domain expertise — general understanding + domain precision for clause analysis at scale.',
+    desc: 'Combined OpenAI\'s general language understanding with custom-trained models for legal domain expertise - general understanding + domain precision for clause analysis at scale.',
   },
   {
     icon: RefreshCw,
-    title: 'Intelligent Caching — 70% API Cost Reduction',
+    title: 'Intelligent Caching - 70% API Cost Reduction',
     desc: 'Built a clause-pattern caching layer that identifies repeated clause patterns across documents, dramatically reducing OpenAI API calls and processing latency for common contract types.',
   },
   {
@@ -313,12 +313,12 @@ export const techHighlights = [
   {
     icon: ServerCrash,
     title: 'Multi-Provider SMS with Fallback',
-    desc: 'International SMS carrier differences required a multi-provider strategy. Built automatic failover and regional routing — ensuring delivery reliability across 50+ countries.',
+    desc: 'International SMS carrier differences required a multi-provider strategy. Built automatic failover and regional routing - ensuring delivery reliability across 50+ countries.',
   },
   {
     icon: Code2,
     title: 'RESTful API + Comprehensive Webhooks',
-    desc: 'Designed a developer-first API for third-party integrations and a robust webhook system for external workflow triggers — enabling ERP, CRM, and HRMS integrations without custom development.',
+    desc: 'Designed a developer-first API for third-party integrations and a robust webhook system for external workflow triggers - enabling ERP, CRM, and HRMS integrations without custom development.',
   },
 ];
 
@@ -332,7 +332,7 @@ export const learnings = [
   {
     type: 'learned',
     title: 'AI Features Need Onboarding Scaffolding',
-    desc: 'Initial users found AI analysis intimidating and skipped it. Added guided tutorials, contextual help, and smart defaults to drive adoption — AI value is only realized when users trust it.',
+    desc: 'Initial users found AI analysis intimidating and skipped it. Added guided tutorials, contextual help, and smart defaults to drive adoption - AI value is only realized when users trust it.',
   },
   {
     type: 'learned',
@@ -342,7 +342,7 @@ export const learnings = [
   {
     type: 'would-do',
     title: 'Feature Flags from Day One',
-    desc: 'Would implement feature flags earlier for gradual AI model rollouts — allowing A/B testing of different models and safer production deployments of accuracy improvements.',
+    desc: 'Would implement feature flags earlier for gradual AI model rollouts - allowing A/B testing of different models and safer production deployments of accuracy improvements.',
   },
   {
     type: 'would-do',
@@ -352,7 +352,7 @@ export const learnings = [
   {
     type: 'would-do',
     title: 'Analytics Dashboard from Day One',
-    desc: 'Would build a comprehensive analytics dashboard from the start to measure feature adoption, workflow completion rates, and AI accuracy — enabling data-driven product decisions.',
+    desc: 'Would build a comprehensive analytics dashboard from the start to measure feature adoption, workflow completion rates, and AI accuracy - enabling data-driven product decisions.',
   },
 ];
 

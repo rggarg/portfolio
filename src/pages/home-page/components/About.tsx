@@ -1,7 +1,7 @@
 import { personalInfo } from '../../../data/portfolio';
 
 const values = [
- { icon: '🎯', title: 'Ownership Mindset', desc: 'I take full responsibility — from architecture through deployment and monitoring.' },
+ { icon: '🎯', title: 'Ownership Mindset', desc: 'I take full responsibility - from architecture through deployment and monitoring.' },
  { icon: '⚡', title: 'Performance First', desc: 'Every system I build is optimized for speed, reliability, and scale from day one.' },
  { icon: '🤝', title: 'Bridge Builder', desc: 'I translate business requirements into elegant technical solutions effortlessly.' },
  { icon: '🔬', title: 'Continuous Learner', desc: 'Always exploring AI, system design patterns, and emerging engineering practices.' },
@@ -28,7 +28,7 @@ export default function About() {
  I'm a <span className="text-text-main font-medium">Lead Product Engineer</span> with 3+ years of hands-on experience building enterprise-grade, AI-powered web platforms. My expertise spans the full MERN stack and cloud infrastructure on AWS.
  </p>
  <p>
- Currently, I lead the architecture and development of an <span className="text-accent font-medium">AI-powered Contract Lifecycle Management platform</span> — driving technical decisions, optimizing performance, and ensuring seamless experiences for enterprise clients.
+ Currently, I lead the architecture and development of an <span className="text-accent font-medium">AI-powered Contract Lifecycle Management platform</span> - driving technical decisions, optimizing performance, and ensuring seamless experiences for enterprise clients.
  </p>
  <p>
  I'm passionate about <span className="text-text-main font-medium">leveraging AI to build impactful products</span> and continuously push the boundaries of what's possible through scalable architecture and clean engineering practices.

@@ -12,7 +12,7 @@ export const personalInfo = {
  linkedin: "https://linkedin.com/in/rggarg",
  twitter: "https://x.com/Rohit18843213",
  resume: "https://drive.google.com/file/d/1Pk_Lj1WYrM8FdgudXnVgTGIXI99AL3x8/view",
- bio: "Lead Product Engineer with deep expertise in the MERN stack and cloud-native AWS architectures. I specialize in building scalable, high-performance enterprise web applications and AI-driven products — from architecture through deployment.",
+ bio: "Lead Product Engineer with deep expertise in the MERN stack and cloud-native AWS architectures. I specialize in building scalable, high-performance enterprise web applications and AI-driven products - from architecture through deployment.",
  shortBio: "3+ years shipping production-grade, AI-powered enterprise platforms. I own problems end-to-end: system design, API performance, team leadership.",
 };
 
@@ -109,24 +109,25 @@ export const projects = [
  id: "clm",
  num: "01",
  featured: true,
- title: "AI-Based Contract Lifecycle Management Platform",
+ title: "Legitt AI - AI-Powered Contract Lifecycle Management Platform",
  subtitle: "Enterprise AI Platform",
- description: "Enterprise-grade AI-powered platform managing the complete lifecycle of contracts — from creation and intelligent templating through multi-stage approval workflows, invoice generation, and Salesforce integration.",
- longDescription: "Designed and built the core backend architecture from scratch. Implemented AI-driven document analysis that automates data extraction and contract population, reducing contract creation time by ~70% for enterprise clients.",
+ link: "/legitt-ai-clm",
+ description: "End-to-end enterprise CLM platform built from scratch - featuring a custom TipTap collaborative editor with redlining, AI-powered contract generation using GPT & Gemini, multi-party e-signatures, bidirectional Salesforce integration, and deployment across 4 global regions with SOC2, GDPR & HIPAA compliance.",
+ longDescription: "Led a team of 10–12 engineers to design and implement every major platform module including the collaborative editor, approval workflow engine (state machine + MongoDB hierarchies), MS Word Online integration via Office.js, dual-database architecture, and enterprise integrations with Salesforce and Okta SSO.",
  contributions: [
- "Designed scalable backend architecture using Node.js and microservices",
- "Built intelligent multi-stage approval workflows and document management",
- "Integrated AI for document analysis, extraction, and automation",
- "Developed dynamic templates for auto-populating contract data",
- "Implemented invoice generation, tax calculation, and reporting engine",
- "Integrated with Salesforce (SFDC) for enterprise CRM connectivity",
+ "Architected & built TipTap collaborative editor with custom redlining + signature extensions",
+ "Designed approval workflow engine with conditional routing through MongoDB dept hierarchies",
+ "Built bidirectional Salesforce integration (webhook + polling hybrid)",
+ "Embedded MS Word Online editing via Office.js APIs",
+ "Implemented multi-region deployment (USA, UAE, Europe, India) with data residency controls",
+ "Achieved SOC2 Type II, GDPR, and HIPAA compliance",
  ],
  impact: [
- "Improved contract processing efficiency by ~70% for enterprise clients",
- "Eliminated manual data entry through AI-powered automation",
- "Delivered reliable, scalable system handling real enterprise workloads",
+ "1K+ contracts processed daily across 4 global regions",
+ "Reduced contract cycle from weeks to hours for enterprise clients",
+ "4.8★ G2 rating - trusted by Fortune 500 clients",
  ],
- stack: ["Node.js", "React.js", "MongoDB", "AWS", "Salesforce", "Express.js", "AI/ML", "REST APIs"],
+ stack: ["React.js", "TipTap", "Node.js", "MySQL", "MongoDB", "Redis", "AWS", "Salesforce", "Okta", "OpenAI", "Gemini"],
  color: colors.accent,
  },
  {
@@ -136,7 +137,7 @@ export const projects = [
  title: "Legitt AI E-Signature Platform",
  subtitle: "E-sign Case Study",
  link: "/esign-platform",
- description: "Intelligent document analysis, AI-driven workflow automation, and multi-channel signature delivery — reimagining contract execution at scale.",
+ description: "Intelligent document analysis, AI-driven workflow automation, and multi-channel signature delivery - reimagining contract execution at scale.",
  contributions: [
  "Led engineering team and core architecture for 2+ years",
  "Architected Python AI microservices and robust Node.js APIs",
@@ -157,7 +158,7 @@ export const projects = [
  title: "Sales Contract Workflow Automation",
  subtitle: "Enterprise Case Study",
  link: "/sales-contract-workflow",
- description: "An integrated workflow automating the entire contract lifecycle — from Opportunity initiation in Salesforce to finalized AI-analyzed agreements via Legitt e-Sign.",
+ description: "An integrated workflow automating the entire contract lifecycle - from Opportunity initiation in Salesforce to finalized AI-analyzed agreements via Legitt e-Sign.",
  contributions: [
  "Bidirectional sync between Salesforce and Legitt",
  "AI-powered pricing and legal clause review",
@@ -198,7 +199,7 @@ export const achievements = [
  {
  icon: "⚡",
  title: "50% API Performance Improvement",
- description: "Reduced API response time through targeted profiling, query optimization, caching layers, and connection pooling — delivering measurably faster user experiences at scale.",
+ description: "Reduced API response time through targeted profiling, query optimization, caching layers, and connection pooling - delivering measurably faster user experiences at scale.",
  metric: "50%",
  metricLabel: "Faster",
  },
@@ -212,7 +213,7 @@ export const achievements = [
  {
  icon: "🏗️",
  title: "End-to-End Technical Leadership",
- description: "Drove architectural decisions and technical strategy from system design through production deployment — across complex multi-team projects.",
+ description: "Drove architectural decisions and technical strategy from system design through production deployment - across complex multi-team projects.",
  metric: "∞",
  metricLabel: "Ownership",
  },
@@ -229,12 +230,12 @@ export const differentiators = [
  {
  num: "01",
  title: "Full Product Ownership",
- description: "End-to-end thinking — I bridge business requirements with technical execution, never losing sight of user impact.",
+ description: "End-to-end thinking - I bridge business requirements with technical execution, never losing sight of user impact.",
  },
  {
  num: "02",
  title: "Scalability by Default",
- description: "Every system I build is designed for growth — clean architecture, thoughtful abstractions, no shortcuts that haunt you later.",
+ description: "Every system I build is designed for growth - clean architecture, thoughtful abstractions, no shortcuts that haunt you later.",
  },
  {
  num: "03",
@@ -244,6 +245,6 @@ export const differentiators = [
  {
  num: "04",
  title: "AI-Forward Mindset",
- description: "Embedding AI meaningfully into products — not as a buzzword, but as a genuine efficiency and intelligence multiplier.",
+ description: "Embedding AI meaningfully into products - not as a buzzword, but as a genuine efficiency and intelligence multiplier.",
  },
 ];

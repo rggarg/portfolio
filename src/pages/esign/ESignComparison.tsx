@@ -19,7 +19,7 @@ export default function ESignComparison() {
             Legitt AI vs. The Incumbents
           </h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
-            DocuSign and Adobe Sign dominate the market — but they treat documents as black boxes.
+            DocuSign and Adobe Sign dominate the market - but they treat documents as black boxes.
             Legitt AI introduces intelligence, automation, and mobile-first delivery that competitors can't match.
           </p>
         </div>

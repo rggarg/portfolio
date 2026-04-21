@@ -11,7 +11,7 @@ export default function ESignLearnings() {
           <p className="section-label justify-center">Reflection</p>
           <h2 className="text-heading font-black text-text-main mb-3">Learnings & Evolution</h2>
           <p className="text-text-dim text-description max-w-2xl mx-auto">
-            Two-plus years of building a production e-signature platform — what I learned the hard way
+            Two-plus years of building a production e-signature platform - what I learned the hard way
             and what I'd do differently with hindsight.
           </p>
         </div>

@@ -137,7 +137,7 @@ export default function SalesContractWorkflow() {
     document.title = 'Sales Contract Workflow | Rohit Garg';
   }, []);
 
-  // Reveal animation — uses MutationObserver so dynamically-rendered elements are caught too
+  // Reveal animation - uses MutationObserver so dynamically-rendered elements are caught too
   useEffect(() => {
     const observeEl = (el: Element, io: IntersectionObserver) => {
       if (!el.classList.contains('visible')) io.observe(el);
@@ -234,11 +234,11 @@ export default function SalesContractWorkflow() {
 
           {/* Subtitle */}
           <p className="animate-fade-up text-subtitle text-text-dim max-w-3xl mx-auto leading-relaxed mb-10" style={{ animationDelay: '0.1s' }}>
-            I designed and led the engineering of a fully automated contract lifecycle platform — integrating{' '}
+            I designed and led the engineering of a fully automated contract lifecycle platform - integrating{' '}
             <span className="text-text-main font-semibold">Salesforce CRM</span>,{' '}
             <span className="text-text-main font-semibold">Microsoft 365</span>,{' '}
             <span className="text-text-main font-semibold">OpenAI</span>, and the{' '}
-            <span className="text-text-main font-semibold">Legitt e-Sign engine</span> — for a Fortune 500 enterprise client with global operations across USA, UAE, Europe, and India.
+            <span className="text-text-main font-semibold">Legitt e-Sign engine</span> - for a Fortune 500 enterprise client with global operations across USA, UAE, Europe, and India.
           </p>
 
           {/* Tags */}
@@ -250,7 +250,7 @@ export default function SalesContractWorkflow() {
             ))}
           </div>
 
-          {/* Client badge — Built by Legitt → for RateGain */}
+          {/* Client badge - Built by Legitt → for RateGain */}
           <div className="animate-fade-up flex flex-wrap items-center justify-center gap-3 mb-10" style={{ animationDelay: '0.25s' }}>
 
             {/* Legitt (builder) */}
@@ -356,11 +356,11 @@ export default function SalesContractWorkflow() {
               <h2 className="text-heading font-black text-text-main mb-6">Manual, Opaque, Slow</h2>
               <div className="space-y-4">
                 {[
-                  'Entire proposal and agreement lifecycle was manual — spreadsheets, email chains, and offline reviews.',
+                  'Entire proposal and agreement lifecycle was manual - spreadsheets, email chains, and offline reviews.',
                   'No visibility into deal status. Teams had no idea if a document was stuck at Legal, Finance, or awaiting customer.',
                   'Legal and Finance teams manually reviewed every agreement line-by-line to find pricing or clause changes.',
                   'Admin teams had to individually contact members to track deal progress and performance.',
-                  'Deals that should close in days took weeks or months — delaying revenue recognition.',
+                  'Deals that should close in days took weeks or months - delaying revenue recognition.',
                 ].map((p, i) => (
                   <div key={i} className="flex items-start gap-3 text-text-dim text-description leading-relaxed">
                     <span className="w-5 h-5 rounded-full border border-red-500/40 text-red-400 flex items-center justify-center text-micro flex-shrink-0 mt-0.5">✕</span>
@@ -378,7 +378,7 @@ export default function SalesContractWorkflow() {
                 {[
                   'Built a 24-step automated workflow connecting Salesforce → Legitt → MS Word → Customer → Signatures → back to SFDC.',
                   'Real-time status tracking within Legitt + SFDC bidirectional sync gives every stakeholder live visibility.',
-                  'AI engine (fine-tuned OpenAI) auto-flags deltas — only escalates to humans when truly needed.',
+                  'AI engine (fine-tuned OpenAI) auto-flags deltas - only escalates to humans when truly needed.',
                   'Role-based dashboards give admins instant insight into team performance and deal bottlenecks.',
                   'Cycle time reduced from weeks to 1–2 days. Revenue starts faster, with fewer errors.',
                 ].map((s, i) => (
@@ -521,7 +521,7 @@ export default function SalesContractWorkflow() {
 
           <div className="reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { name: 'Opportunity', desc: 'Deal entity — core anchor', fields: 'Stage, Products, Docs' },
+              { name: 'Opportunity', desc: 'Deal entity - core anchor', fields: 'Stage, Products, Docs' },
               { name: 'Quote', desc: 'Proposal & Agreement tracker', fields: 'Status, Pricing, Type' },
               { name: 'Account', desc: 'Customer info & region', fields: 'Name, Region, Contacts' },
               { name: 'Pricebook', desc: 'Product pricing catalog', fields: 'PricebookEntry, Currency' },
@@ -674,7 +674,7 @@ export default function SalesContractWorkflow() {
               First Enterprise Win for Legitt
             </h2>
             <p className="text-description text-text-dim leading-relaxed mb-10">
-              This was the first billion-dollar enterprise contract for Legitt. I led the product engineering from architecture to deployment — designing the systems, guiding the team, and solving the hard integration problems that made it possible. The platform continues to scale, processing hundreds of agreements monthly for the client.
+              This was the first billion-dollar enterprise contract for Legitt. I led the product engineering from architecture to deployment - designing the systems, guiding the team, and solving the hard integration problems that made it possible. The platform continues to scale, processing hundreds of agreements monthly for the client.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
