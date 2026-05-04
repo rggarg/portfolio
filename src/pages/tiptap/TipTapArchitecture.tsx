@@ -23,7 +23,7 @@ export default function TipTapArchitecture() {
               <div className="w-3 h-3 rounded-full" style={{ background: '#ff5f57' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#febc2e' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#28c840' }} />
-              <span className="ml-4 text-mini text-text-dim font-mono">tiptap_architecture.svg</span>
+              <span className="ml-4 text-mini text-text-dim font-mono">Tiptap Architecture</span>
             </div>
             {/* Light-mode card background for the SVG */}
             <div className="p-6" style={{ background: '#f5f5f0', borderRadius: '0 0 12px 12px' }}>

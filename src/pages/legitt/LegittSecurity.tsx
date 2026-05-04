@@ -61,7 +61,7 @@ export default function LegittSecurity() {
               <div className="space-y-3">
                 {[
                   { label: 'Isolation', detail: 'Application-level tenant isolation: every query is scoped to orgId. No cross-tenant data access possible at the ORM layer.' },
-                  { label: 'Encryption', detail: 'AES-256 at rest (AWS KMS manages keys per tenant). TLS 1.3 in transit. Signature images stored encrypted in S3 with signed URLs.' },
+                  { label: 'Encryption', detail: 'AES-256 at rest. TLS 1.3 in transit. Signature images stored encrypted in S3 with signed URLs.' },
                   { label: 'RBAC', detail: 'Granular role-based permissions: Owner, Admin, Editor, Viewer, Approver, Signatory. Each role has a precise capability matrix enforced server-side.' },
                 ].map((item, i) => (
                   <div key={i}>

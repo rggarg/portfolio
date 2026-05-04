@@ -21,7 +21,7 @@ export default function LegittArchitecture() {
               <div className="w-3 h-3 rounded-full" style={{ background: '#ff5f57' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#febc2e' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#28c840' }} />
-              <span className="ml-4 text-mini text-text-dim font-mono">system_architecture.svg</span>
+              <span className="ml-4 text-mini text-text-dim font-mono">System Architecture</span>
               <span className="ml-auto text-mini text-text-dim">6-layer multi-tier architecture · 4 global regions</span>
             </div>
             <div className="p-6" style={{ background: '#f5f5f0' }}>

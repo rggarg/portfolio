@@ -75,7 +75,7 @@ export default function LegittIntegrations() {
             <h2 className="text-heading font-black text-text-main mb-4">MS Word Online Integration</h2>
             <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
               For enterprise clients who prefer Microsoft Word, the entire drafting and redlining workflow
-              stays inside MS Word Online - embedded in the platform via Office.js. TipTap is not involved.
+              stays inside MS Word Online - embedded in the platform via Office.js.
               Only after the document is{' '}
               <span className="text-text-main font-semibold">fully approved</span> does Legitt fetch the
               final DOCX and load it in <span className="text-text-main font-semibold">non-edit (read-only) mode</span>{' '}
@@ -181,44 +181,49 @@ export default function LegittIntegrations() {
             <h3 className="text-title-sm font-black text-text-main mb-5">Version Storage Schema</h3>
             <div className="grid md:grid-cols-2 gap-5">
               <div>
-                <div className="text-small font-bold mb-2" style={{ color: '#fb923c' }}>MySQL - Version Metadata</div>
-                <pre
-                  className="text-mini font-mono p-4 rounded-xl leading-relaxed overflow-x-auto"
-                  style={{ background: 'rgba(0,0,0,0.5)', color: '#fed7aa', border: '1px solid rgba(251,146,60,0.2)' }}
-                >{`document_versions {
-  id         INT PK AUTO_INCREMENT
-  doc_id     INT FK → documents.id
-  version    INT         -- v1, v2, v3...
-  created_by INT FK → users.id
-  created_at TIMESTAMP
-  event_type ENUM(        -- 'manual_save',
-    'auto_save',          -- 'rollback',
-    'approval_checkpoint',-- 'signing_lock'
-  )
-  mongo_blob_id VARCHAR   -- → MongoDB ref
-  is_locked   BOOLEAN     -- after signing
-}`}</pre>
-              </div>
-              <div>
-                <div className="text-small font-bold mb-2" style={{ color: '#fb923c' }}>MongoDB - Content Blob</div>
+                <div className="text-small font-bold mb-2" style={{ color: '#fb923c' }}>MongoDB - Version Metadata</div>
                 <pre
                   className="text-mini font-mono p-4 rounded-xl leading-relaxed overflow-x-auto"
                   style={{ background: 'rgba(0,0,0,0.5)', color: '#fed7aa', border: '1px solid rgba(251,146,60,0.2)' }}
                 >{`{
-  _id: ObjectId("..."),    // === mysql.mongo_blob_id
-  doc_id: 12345,
-  version: 4,
-  tiptap_json: {           // full TipTap document
-    type: "doc",
-    content: [ /* nodes */ ]
-  },
+  _id: ObjectId("..."),
+  doc_id: ObjectId("..."),
+  version: 4,               // v1, v2, v3...
+  created_by: ObjectId("..."),
+  created_at: ISODate("..."),
+  event_type: "manual_save", // 'auto_save', 'rollback', 'approval_checkpoint', etc.
+  s3_object_key: "docs/v4.json", // → AWS S3 ref
+  is_locked: false,         // true after signing
   metadata: {
     word_count: 2841,
     page_estimate: 12,
     has_redlines: true,
     sig_field_count: 3
-  },
-  created_at: ISODate("2024-...")
+  }
+}`}</pre>
+              </div>
+              <div>
+                <div className="text-small font-bold mb-2" style={{ color: '#fb923c' }}>AWS S3 - Content Blob</div>
+                <pre
+                  className="text-mini font-mono p-4 rounded-xl leading-relaxed overflow-x-auto"
+                  style={{ background: 'rgba(0,0,0,0.5)', color: '#fed7aa', border: '1px solid rgba(251,146,60,0.2)' }}
+                >{`// Path: s3://legitt-contracts/docs/v4.json
+// Content-Type: application/json
+
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Full TipTap document JSON..."
+        }
+      ]
+    }
+    // ... complete node tree
+  ]
 }`}</pre>
               </div>
             </div>

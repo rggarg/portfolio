@@ -165,7 +165,7 @@ export default function Hero() {
                   <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#febc2e' }} />
                   <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#28c840' }} />
                 </div>
-                <span className="text-mini text-text-muted font-mono">products_shipped.ts</span>
+                <span className="text-mini text-text-muted font-mono">Products Shipped</span>
               </div>
 
               {/* Product list */}

@@ -21,7 +21,7 @@ export default function LegittLifecycle() {
               <div className="w-3 h-3 rounded-full" style={{ background: '#ff5f57' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#febc2e' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#28c840' }} />
-              <span className="ml-4 text-mini text-text-dim font-mono">contract_lifecycle_flow.svg</span>
+              <span className="ml-4 text-mini text-text-dim font-mono">Contract Lifecycle Flow</span>
             </div>
             <div className="p-6" style={{ background: '#f5f5f0' }}>
               <img
@@ -51,8 +51,8 @@ export default function LegittLifecycle() {
                   {stage.icon}
                 </div>
                 <div>
-                  <div className="text-small font-black text-text-main mb-1">{stage.stage}</div>
-                  <div className="text-mini text-text-dim leading-snug">{stage.desc}</div>
+                  <div className="text-regular font-black text-text-main mb-1">{stage.stage}</div>
+                  <div className="text-small text-text-dim leading-snug">{stage.desc}</div>
                 </div>
               </div>
             ))}

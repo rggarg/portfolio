@@ -34,8 +34,8 @@ export default function LegittChallenge() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(167,139,250,0.12)'; }}
               >
                 <div className="text-2xl mb-3">{c.icon}</div>
-                <div className="text-small font-black text-text-main mb-2">{c.title}</div>
-                <div className="text-mini text-text-dim leading-snug">{c.desc}</div>
+                <div className="text-regular font-black text-text-main mb-2">{c.title}</div>
+                <div className="text-small text-text-dim leading-snug">{c.desc}</div>
               </div>
             ))}
           </div>

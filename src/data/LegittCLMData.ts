@@ -18,7 +18,7 @@ export const heroBadges = [
 
 export const techTags = [
   'React.js', 'TipTap', 'Node.js', 'Express.js', 'MySQL', 'MongoDB',
-  'Redis', 'Socket.io', 'AWS EC2/S3/Lambda', 'Salesforce REST API',
+  'Redis', 'Socket.io', 'AWS EC2/S3', 'Salesforce REST API',
   'MS Office.js', 'Okta SSO/SAML', 'OpenAI', 'Gemini', 'Puppeteer',
   'LibreOffice', 'AWS CodePipeline', 'Nginx',
 ];

@@ -29,7 +29,7 @@ export const skills = [
  icon: "⚙️",
  color: colors.accent,
  description: "Expert in Node.js and Express.js for scalable, high-throughput APIs. Deep focus on performance optimization, caching strategies, and efficient data handling.",
- tags: ["Node.js", "Express.js", "REST APIs", "Microservices", "GraphQL"],
+ tags: ["Node.js", "Express.js", "REST APIs", "Microservices"],
  },
  {
  category: "Frontend Development",
@@ -50,7 +50,7 @@ export const skills = [
  icon: "☁️",
  color: "#60a5fa" /* no matching tailwind theme color */,
  description: "Hands-on with AWS services. CI/CD pipelines, deployment automation, and system monitoring for maximum reliability and uptime.",
- tags: ["AWS EC2", "S3", "Lambda", "SSM", "CI/CD", "Monitoring"],
+ tags: ["AWS EC2", "S3", "CI/CD", "Monitoring"],
  },
  {
  category: "System Design",
@@ -71,12 +71,12 @@ export const skills = [
 export const techStack = [
  { name: "Node.js", level: 95 },
  { name: "React.js", level: 90 },
- { name: "MongoDB", level: 88 },
- { name: "AWS", level: 82 },
+ { name: "MongoDB", level: 85 },
+ { name: "AWS", level: 80 },
  { name: "Express.js", level: 95 },
- { name: "SQL", level: 80 },
+ { name: "SQL", level: 90 },
  { name: "System Design", level: 85 },
- { name: "CI/CD", level: 78 },
+ { name: "CI/CD", level: 80 },
 ];
 
 export const techLogos = [
@@ -110,7 +110,7 @@ export const experience = [
  current: false,
  description: "Built foundational platform modules and core infrastructure for the Legitt AI contract management system. Progressed from backend engineering to owning full product features end-to-end.",
  achievements: [
- { text: "Built the invoicing and financial workflow engine with dynamic tax calculation, PDF generation, and multi-currency support", highlight: "Invoicing Engine" },
+ { text: "Built the invoicing and financial workflow engine with dynamic tax calculation, Excel generation, and multi-currency support", highlight: "Invoicing Engine" },
  { text: "Developed the multi-party e-signature orchestration system — sequential/parallel signing with SMS, email, and WhatsApp delivery", highlight: "E-Signature Platform" },
  { text: "Implemented the sales contract workflow integrating Salesforce Opportunities through AI review and signature collection", highlight: "Sales Flow" },
  { text: "Established the dual-database architecture (MySQL + MongoDB) and Redis caching strategy still used at scale today", highlight: "Core Architecture" },
@@ -127,7 +127,7 @@ export const projects = [
  title: "Legitt AI - AI-Powered Contract Lifecycle Management Platform",
  subtitle: "Enterprise AI Platform",
  link: "/legitt-ai-clm",
- description: "End-to-end enterprise CLM platform built from scratch - featuring a custom TipTap collaborative editor with redlining, AI-powered contract generation using GPT & Gemini, multi-party e-signatures, bidirectional Salesforce integration, and deployment across 4 global regions with SOC2, GDPR & HIPAA compliance.",
+ description: "End-to-end enterprise CLM platform built from scratch - featuring a custom TipTap collaborative editor with redlining, AI-powered contract generation, multi-party e-signatures, bidirectional Salesforce integration, and deployment across 4 global regions with SOC2, GDPR & HIPAA compliance.",
  longDescription: "Led a team of 10–12 engineers to design and implement every major platform module including the collaborative editor, approval workflow engine (state machine + MongoDB hierarchies), MS Word Online integration via Office.js, dual-database architecture, and enterprise integrations with Salesforce and Okta SSO.",
  contributions: [
  "Architected & built TipTap collaborative editor with custom redlining + signature extensions",
