@@ -120,9 +120,9 @@ function PipelineFlow({
       </div>
 
       {/* Steps row */}
-      <div className="flex items-start gap-0">
+      <div className="flex flex-col sm:flex-row items-start gap-0">
         {steps.map((step, i) => (
-          <div key={i} className="flex items-start flex-1 min-w-0">
+          <div key={i} className="flex sm:flex-col items-start sm:items-stretch flex-1 min-w-0 w-full sm:w-auto">
             {/* Step card */}
             <div className="flex-1 min-w-0 flex flex-col items-center text-center">
               {/* Step number pill */}
@@ -156,9 +156,9 @@ function PipelineFlow({
               <div className="text-mini text-text-dim leading-snug px-1">{step.desc}</div>
             </div>
 
-            {/* Horizontal connector - NOT inside step column */}
+            {/* Horizontal connector - hidden on mobile vertical layout */}
             {i < steps.length - 1 && (
-              <div className="flex flex-col items-center justify-start pt-8 flex-shrink-0 mx-1" style={{ width: '36px' }}>
+              <div className="hidden sm:flex flex-col items-center justify-start pt-8 flex-shrink-0 mx-1" style={{ width: '36px' }}>
                 {/* Animated dashed line with arrow */}
                 <div className="flex items-center gap-0.5 mt-0">
                   <div

@@ -122,7 +122,7 @@ export default function TipTapHero() {
 
           {/* Hero stats grid */}
           <div
-            className="animate-fade-up grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12"
+            className="animate-fade-up grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12"
             style={{ animationDelay: '0.3s' }}
           >
             {heroStats.map((stat) => (

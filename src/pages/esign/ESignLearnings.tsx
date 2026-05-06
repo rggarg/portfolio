@@ -16,7 +16,7 @@ export default function ESignLearnings() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10">
           {/* Key Takeaways */}
           <div className="reveal-left">
             <div className="flex items-center gap-3 mb-6">

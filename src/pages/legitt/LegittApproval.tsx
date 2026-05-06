@@ -23,7 +23,7 @@ export default function LegittApproval() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10">
           {/* Left: State machine + MongoDB hierarchy */}
           <div className="space-y-8">
             {/* State machine visual */}

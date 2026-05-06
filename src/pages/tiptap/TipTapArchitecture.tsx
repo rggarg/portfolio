@@ -15,7 +15,7 @@ export default function TipTapArchitecture() {
           </p>
         </div>
 
-        <div className="reveal grid lg:grid-cols-2 gap-10 items-start">
+        <div className="reveal grid lg:grid-cols-2 gap-6 lg:gap-10 items-start">
           {/* Left: SVG in a light-mode card panel */}
           <div className="glass-card rounded-2xl overflow-hidden border-border/60" style={{ borderColor: 'rgba(0,204,170,0.15)' }}>
             {/* Document-feel header bar */}
@@ -31,7 +31,7 @@ export default function TipTapArchitecture() {
                 src={tiptapArchSvg}
                 alt="TipTap Editor Architecture Diagram"
                 className="w-full h-auto"
-                style={{ maxHeight: '600px', objectFit: 'contain' }}
+                style={{ maxHeight: 'clamp(250px, 60vw, 600px)', objectFit: 'contain' }}
               />
             </div>
           </div>

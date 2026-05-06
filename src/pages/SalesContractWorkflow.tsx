@@ -409,7 +409,7 @@ export default function SalesContractWorkflow() {
             {screenshots.map((sc, i) => (
               <div
                 key={sc.title}
-                className={`reveal flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-center`}
+                className={`reveal flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-10 items-center`}
               >
                 {/* Image */}
                 <div className="flex-1 w-full">
@@ -465,7 +465,7 @@ export default function SalesContractWorkflow() {
                   src={salesforceIntegrationSvg}
                   alt="Salesforce-Legitt Integration Flow Diagram"
                   className="w-full h-auto"
-                  style={{ maxHeight: '620px', objectFit: 'contain' }}
+                  style={{ maxHeight: 'clamp(250px, 60vw, 620px)', objectFit: 'contain' }}
                 />
               </div>
             </div>

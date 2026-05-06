@@ -66,7 +66,7 @@ export default function LegittImpact() {
             Trusted by Enterprise Clients
           </h3>
 
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-8">
             {enterpriseClients.map((client) => (
               <div
                 key={client.name}

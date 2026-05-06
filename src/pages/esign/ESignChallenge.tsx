@@ -17,7 +17,7 @@ export default function ESignChallenge() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-16 items-start">
           {/* Problem */}
           <div className="reveal-left">
             <div className="flex items-center gap-3 mb-6">

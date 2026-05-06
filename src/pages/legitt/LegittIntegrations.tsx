@@ -16,7 +16,7 @@ export default function LegittIntegrations() {
             </p>
           </div>
 
-          <div className="reveal grid lg:grid-cols-2 gap-10 items-start">
+          <div className="reveal grid lg:grid-cols-2 gap-6 lg:gap-10 items-start">
             {/* Pipeline flow */}
             <div>
               <h3 className="text-title-sm font-black text-text-main mb-5">Sync Pipeline</h3>

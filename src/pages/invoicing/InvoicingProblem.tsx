@@ -5,7 +5,7 @@ export default function InvoicingProblem() {
   return (
     <section className="py-24 border-t border-border/40">
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-16 items-start">
           {/* Problem */}
           <div className="reveal-left">
             <p className="section-label">The Problem</p>

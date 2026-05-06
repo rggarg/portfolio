@@ -95,7 +95,7 @@ export default function ESignLifecycle() {
           </p>
         </div>
 
-        <div className="reveal grid lg:grid-cols-2 gap-10 items-start mb-20">
+        <div className="reveal grid lg:grid-cols-2 gap-6 lg:gap-10 items-start mb-20">
           {/* Left: SVG diagram */}
           <div className="glass-card rounded-2xl overflow-hidden" style={{ borderColor: 'rgba(167,139,250,0.18)' }}>
             <div className="flex items-center gap-2 px-5 py-3 border-b border-border/40" style={{ background: 'rgba(167,139,250,0.04)' }}>
@@ -109,7 +109,7 @@ export default function ESignLifecycle() {
                 src={contractLifecycleSvg}
                 alt="Contract Lifecycle Flow Diagram"
                 className="w-full h-auto"
-                style={{ maxHeight: '520px', objectFit: 'contain' }}
+                style={{ maxHeight: 'clamp(250px, 60vw, 520px)', objectFit: 'contain' }}
               />
             </div>
           </div>
