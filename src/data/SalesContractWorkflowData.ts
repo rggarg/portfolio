@@ -51,7 +51,7 @@ export const metrics = [
 
 export const techStack = [
   { category: 'Frontend', items: ['React.js', 'JavaScript', 'TailwindCSS'] },
-  { category: 'Backend', items: ['Node.js', 'Express.js', 'MySQL', 'MongoDB'] },
+  { category: 'Backend', items: ['Node.js', 'Python', 'Express.js', 'MySQL', 'MongoDB'] },
   { category: 'Cloud & Storage', items: ['AWS (EC2, S3)', 'SharePoint', 'Microsoft 365'] },
   { category: 'Integrations', items: ['Salesforce REST API', 'MS Graph API', 'OpenAI GPT'] },
   { category: 'E-Signature', items: ['Legitt e-Sign', 'Signature Blocks Engine'] },

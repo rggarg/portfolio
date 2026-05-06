@@ -9,8 +9,8 @@ export default function LegittArchitecture() {
           <p className="section-label justify-center">Technical Design</p>
           <h2 className="text-heading font-black text-text-main mb-4">System Architecture</h2>
           <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
-            A 6-layer multi-tier architecture designed for enterprise scale - handling 200+ concurrent users
-            across 4 global regions with 99.9% uptime.
+            A 4-tier multi-layer architecture designed for enterprise scale — handling 200+ concurrent users
+            across 4 global regions with dual-server AI processing and 99.9% uptime.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ export default function LegittArchitecture() {
               <div className="w-3 h-3 rounded-full" style={{ background: '#febc2e' }} />
               <div className="w-3 h-3 rounded-full" style={{ background: '#28c840' }} />
               <span className="ml-4 text-mini text-text-dim font-mono">System Architecture</span>
-              <span className="ml-auto text-mini text-text-dim">6-layer multi-tier architecture · 4 global regions</span>
+              <span className="ml-auto text-mini text-text-dim">4-tier architecture · Node.js + Python dual servers · 4 global regions</span>
             </div>
             <div className="p-6" style={{ background: '#f5f5f0' }}>
               <img

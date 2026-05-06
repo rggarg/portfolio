@@ -266,7 +266,7 @@ export const archLayers = [
   },
   {
     label: 'Database',
-    tech: 'SQL',
+    tech: 'SQL / MongoDB',
     color: '#47a248',
     desc: 'Document metadata, workflow state, audit trail',
   },
@@ -282,7 +282,7 @@ export const archLayers = [
 export const techStack = [
   { category: 'Frontend', items: ['React.js', 'JavaScript', 'WebSockets'] },
   { category: 'Backend', items: ['Node.js', 'Express.js', 'REST APIs', 'Webhooks'] },
-  { category: 'Database', items: ['SQL', 'Event Sourcing', 'Workflow State Machine'] },
+  { category: 'Database', items: ['SQL', 'MongoDB', 'Event Sourcing', 'Workflow State Machine'] },
   { category: 'AI / ML', items: ['OpenAI GPT Models', 'Custom-Trained Models', 'Python Microservices', 'Async Queue'] },
   { category: 'Delivery', items: ['Email Gateway', 'SMS Gateway (Multi-Provider)', 'Global Fallback Routing'] },
   { category: 'Infrastructure', items: ['Cloud Hosting', 'Message Queue', 'Caching Layer', 'Audit Logging'] },

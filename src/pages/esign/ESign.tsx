@@ -6,7 +6,7 @@ import ESignHero from './ESignHero';
 import ESignChallenge from './ESignChallenge';
 import ESignMetrics from './ESignMetrics';
 import ESignFeatures from './ESignFeatures';
-import ESignFlow from './ESignFlow';
+import ESignLifecycle from './ESignLifecycle';
 import ESignArchitecture from './ESignArchitecture';
 import ESignTechHighlights from './ESignTechHighlights';
 import ESignComparison from './ESignComparison';
@@ -74,7 +74,7 @@ export default function ESign() {
       <ESignChallenge />
       <ESignMetrics />
       <ESignFeatures />
-      <ESignFlow />
+      <ESignLifecycle />
       <ESignArchitecture />
       <ESignTechHighlights />
       <ESignComparison />

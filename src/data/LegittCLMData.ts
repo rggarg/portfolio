@@ -39,40 +39,40 @@ export const technicalChallenges = [
 
 export const archLayerAnnotations = [
   {
-    layer: 'User Layer',
+    layer: 'Client Layer',
     color: '#60a5fa',
-    tech: 'Browser Client • React + Tiptap • WebSocket • MS Word',
-    explanation: 'Up to 200+ concurrent users access the platform via browser. The React + TipTap frontend handles collaborative contract editing; WebSocket clients maintain real-time presence; MS Word integration embeds Office.js for Word Online editing within the platform.',
+    tech: 'React SPA + Redux · WebSocket Client (Socket.io)',
+    explanation: 'Two browser-side components. The React SPA manages all UI — contract editor (TipTap), approval dashboards, signature screens — with Redux for centralized state. In parallel, the Socket.io WebSocket client holds a persistent bidirectional connection: emitting document-change events on every keystroke, receiving live presence indicators (who\'s viewing/editing), and surfacing instant approval and signature notifications without any page refresh.',
   },
   {
     layer: 'Load Balancer',
     color: '#00ccaa',
-    tech: 'Nginx - Request routing + SSL termination',
-    explanation: 'Nginx sits in front of all application servers handling SSL termination, request routing, and load distribution. The same Nginx config is replicated across each regional deployment (USA primary + UAE secondary).',
+    tech: 'Nginx · SSL/TLS Termination · Smart Routing · Rate Limiting',
+    explanation: 'Single entry point for all client traffic. Nginx terminates SSL/TLS, then routes by URL pattern: /api/contracts/* and WebSocket upgrades go to Node.js, while /api/ai/* and /api/analytics/* route to the Python server. Rate limiting is enforced here to guard against DDoS. The same Nginx config is replicated independently across each regional deployment (USA primary, UAE secondary).',
   },
   {
-    layer: 'Application Servers',
+    layer: 'Node.js Server',
     color: '#a78bfa',
-    tech: 'Node.js + Express REST APIs • Socket.io Server • Redis Cache',
-    explanation: 'The core application tier: Node.js/Express handles all REST API traffic; the Socket.io server manages WebSocket connections for real-time collaboration; Redis provides session storage, template caching, and the write buffer between keystrokes and the main database.',
+    tech: 'Express.js REST APIs · Socket.io · Salesforce · Okta SAML · MS Office.js',
+    explanation: 'Primary application server with four responsibilities. (1) REST APIs for the full contract lifecycle — CRUD, approval submission/routing, and signature orchestration. (2) Business logic: DOCX uploads trigger LibreOffice → HTML → TipTap JSON conversion; saves are debounced to Redis then migrated to MySQL/MongoDB; PDF export runs Puppeteer against the final TipTap JSON. (3) Socket.io server broadcasting real-time collaboration events and permission handoffs. (4) All external integrations: bidirectional Salesforce sync via REST API (15-min polling + on-demand), Okta SAML assertion validation and JWT issuance, and MS Office.js callbacks for Word Online co-authoring.',
   },
   {
-    layer: 'Data Layer',
-    color: '#f5a623',
-    tech: 'MySQL (metadata) • MongoDB (content & hierarchies) • AWS S3 (files)',
-    explanation: 'Dual-database architecture by design. MySQL stores ACID-critical transactional data (document metadata, users, subscriptions, signing status). MongoDB stores flexible JSON blobs (TipTap content, approval workflow hierarchies, AI review outputs). S3 stores raw DOCX/PDF files.',
+    layer: 'Python Server',
+    color: '#f97316',
+    tech: 'FastAPI · AI/ML Contract Analysis · Bulk Processing · Socket.io Progress Events',
+    explanation: 'Specialized server for computationally intensive work, keeping AI load off Node.js. Receives contract JSON from Node.js via direct HTTP or a Redis job queue, then runs: clause classification (Termination, Liability, Payment), risk scoring per clause (0–100 scale), GDPR/HIPAA compliance checks, and missing-clause detection. Handles bulk analysis batches of 500+ contracts in parallel using multiple worker instances draining from the Redis queue. Has its own Socket.io server to push real-time progress events (e.g., "Analyzing… 45%") back to the React client during long-running jobs.',
   },
   {
-    layer: 'Background Processing',
+    layer: 'Redis Cache',
     color: '#fb923c',
-    tech: 'LibreOffice (DOCX→HTML) • Puppeteer (HTML→PDF) • AWS CodePipeline (CI/CD)',
-    explanation: 'Async workers handle format conversion (LibreOffice for DOCX imports, Puppeteer for PDF generation). AWS CodePipeline orchestrates CI/CD - build, test, and deployment automation across all regions.',
+    tech: 'Session Store · Write Buffer · Pub/Sub Messaging · Rate Limiting',
+    explanation: 'In-memory store serving three distinct roles. (1) Session store: sub-millisecond JWT validation on every API request, with auto-expiring TTLs. (2) Write buffer: keystrokes debounce into Redis immediately (<1ms), then a background job migrates to MySQL + MongoDB every 2 minutes — this decouples high-frequency writes from the relational database. (3) Pub/Sub backbone: Socket.io on each Node.js instance publishes events to a Redis channel; all other server instances subscribe and broadcast to their connected clients — this is what enables horizontal scaling of real-time collaboration across multiple servers.',
   },
   {
-    layer: 'External Integrations',
-    color: '#f472b6',
-    tech: 'Salesforce REST API • Okta SSO/SAML • MS Office.js • Slack Notifications',
-    explanation: 'Bidirectional Salesforce sync via REST API with webhook-driven updates. Okta handles enterprise SSO and SAML authentication. Office.js provides MS Word Online editing embedded within Legitt. Slack delivers real-time approval and status notifications.',
+    layer: 'Database Layer',
+    color: '#4ade80',
+    tech: 'MySQL (ACID metadata) · MongoDB (TipTap JSON + hierarchies) · AWS S3 (files)',
+    explanation: 'Three stores, each chosen for what it does best. MySQL handles all ACID-critical transactional data: document metadata, version records, user/team management, subscription billing, approval process tracking, and signatory status — with foreign key constraints and indexed queries for fast filtering. MongoDB stores flexible schema data: raw TipTap JSON contract content (schema evolves without migrations), nested approval workflow hierarchies, and AI analysis outputs with clause arrays. S3 holds immutable file objects — generated signed PDFs, original DOCX uploads, and signature images — served to clients via time-limited presigned URLs. Cross-region S3 replication to UAE satisfies data residency requirements.',
   },
 ];
 
@@ -314,7 +314,7 @@ export const whatIdoDifferently = [
 export const futureRoadmap = [
   { title: 'CRDT Multi-Cursor Editing', desc: 'True simultaneous editing via Yjs/Automerge for teams that need real-time co-authoring' },
   { title: 'Advanced AI Agents', desc: 'Autonomous contract negotiation agents that can propose and counter-propose clause changes' },
-  { title: '10× Scale Architecture', desc: 'Migrate to Kubernetes for auto-scaling, handle 10K+ contracts per day with horizontal sharding' },
+  { title: '10× Scale Architecture', desc: 'Handle 10K+ contracts per day with horizontal sharding' },
   { title: 'ERP Integration Expansion', desc: 'SAP, Oracle, and NetSuite connectors - beyond Salesforce - for full enterprise ecosystem' },
   { title: 'Proactive Obligation Tracking', desc: 'Post-execution monitoring of contract obligations with automated reminders and breach alerts' },
   { title: 'White-Label Deployments', desc: 'Full white-label support for enterprise clients who want the platform under their own domain' },

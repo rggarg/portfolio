@@ -4,6 +4,7 @@ import { CustomCursor, ScrollProgress } from '../components/Cursor';
 import rategainLogo from '../assets/images/rategain-logo.svg';
 import legittLogo from '../assets/images/legitt-ai-logo.webp';
 import integrationSfdc from '../assets/images/salesforce-integration.webp';
+import salesforceIntegrationSvg from '../assets/images/salesforce_legitt_integration.svg';
 import integrationWord from '../assets/images/microsoft-word.webp';
 import integrationOutlook from '../assets/images/outlook.jpg';
 import { useNavigate } from 'react-router-dom';
@@ -432,6 +433,91 @@ export default function SalesContractWorkflow() {
                   <h3 className="text-title font-black text-text-main mb-4">{sc.title}</h3>
                   <p className="text-description text-text-dim leading-relaxed">{sc.desc}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SALESFORCE INTEGRATION DIAGRAM ── */}
+      <section className="py-24 border-t border-border/40">
+        <div className="section-container">
+          <div className="reveal text-center mb-16">
+            <p className="section-label justify-center">Integration Deep-Dive</p>
+            <h2 className="text-heading font-black text-text-main mb-4">How the Salesforce Integration Works</h2>
+            <p className="text-description text-text-dim max-w-2xl mx-auto leading-relaxed">
+              A bidirectional API integration connecting Salesforce CRM to Legitt — from a single button click on an Opportunity record to a fully executed contract synced back as "Closed Won".
+            </p>
+          </div>
+
+          {/* SVG diagram */}
+          <div className="reveal mb-10">
+            <div className="glass-card rounded-2xl overflow-hidden" style={{ borderColor: 'rgba(96,165,250,0.18)' }}>
+              <div className="flex items-center gap-2 px-5 py-3 border-b border-border/40" style={{ background: 'rgba(96,165,250,0.04)' }}>
+                <div className="w-3 h-3 rounded-full" style={{ background: '#ff5f57' }} />
+                <div className="w-3 h-3 rounded-full" style={{ background: '#febc2e' }} />
+                <div className="w-3 h-3 rounded-full" style={{ background: '#28c840' }} />
+                <span className="ml-4 text-mini text-text-dim font-mono">Salesforce ↔ Legitt Integration Flow</span>
+                <span className="ml-auto text-mini text-text-dim">Bidirectional · OAuth 2.0 · Event-driven sync</span>
+              </div>
+              <div className="p-6" style={{ background: '#f5f5f0' }}>
+                <img
+                  src={salesforceIntegrationSvg}
+                  alt="Salesforce-Legitt Integration Flow Diagram"
+                  className="w-full h-auto"
+                  style={{ maxHeight: '620px', objectFit: 'contain' }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* 4 zone annotation cards */}
+          <div className="reveal grid md:grid-cols-2 gap-4">
+            {[
+              {
+                zone: 'Salesforce CRM',
+                color: '#60a5fa',
+                icon: '🏢',
+                desc: 'Three standard Salesforce objects feed the integration: Account (company profile, billing address, primary contact), Opportunity (deal name, value, close date), and optionally Quote (line items, pricing, product SKUs). A custom "Generate Contract" button on the Opportunity page — visible only to reps with the correct permission set — triggers the entire outbound flow with a single click.',
+              },
+              {
+                zone: 'Integration Layer',
+                color: '#a78bfa',
+                icon: '⚙️',
+                desc: 'The button fires a POST to the Legitt API, authenticated via an OAuth 2.0 Bearer token stored in a Salesforce Named Credential. A Node.js mapping layer transforms raw Salesforce fields into Legitt\'s contract schema: Account → client details, Opportunity → contract metadata and value, Quote line items → contract clauses with auto-generated payment terms. Business logic also selects the correct contract template based on deal value, industry, and record type.',
+              },
+              {
+                zone: 'Legitt AI Platform',
+                color: '#00ccaa',
+                icon: '📄',
+                desc: 'A contract record is created in MongoDB, pre-populated with all Salesforce data. The sales rep is redirected to a new tab and auto-logged in via a short-lived JWT, landing directly in the MS Word Online editor with the contract ready to review. After editing, it routes through the approval workflow and multi-party signature collection. Each lifecycle event — created, approved, signed, executed — fires an event-driven callback back to Salesforce.',
+              },
+              {
+                zone: 'Salesforce Updated',
+                color: '#f5a623',
+                icon: '🔄',
+                desc: 'Every contract milestone writes back via the Salesforce REST API. The Opportunity stage tracks progress: "Proposal/Negotiation" → "Contract Approved" → "Contract Signed" → "Closed Won". Custom fields (Legitt_Contract_Status__c, execution date, contract URL) update in real-time. When the contract is fully executed, the final signed PDF uploads as a Salesforce File linked to the Opportunity — giving the sales team complete visibility without leaving their CRM.',
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="glass-card rounded-xl p-5 hover:scale-101 transition-all duration-300"
+                style={{ borderColor: card.color + '18' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = card.color + '45'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = card.color + '18'; }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-base flex-shrink-0"
+                    style={{ background: card.color + '18', border: `1px solid ${card.color}35` }}
+                  >
+                    {card.icon}
+                  </div>
+                  <div className="text-small font-black tracking-widest uppercase" style={{ color: card.color }}>
+                    {card.zone}
+                  </div>
+                </div>
+                <p className="text-mini text-text-dim leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
