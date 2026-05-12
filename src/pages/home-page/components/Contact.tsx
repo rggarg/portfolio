@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Copy, Check } from 'lucide-react';
 import { personalInfo } from '../../../data/portfolio';
 
 export default function Contact() {
@@ -31,7 +32,7 @@ export default function Contact() {
 
  {/* Main contact card */}
  <div className="max-w-2xl mx-auto">
- <div className="glass-card rounded-2xl p-8 lg:p-10 reveal delay-200 relative overflow-hidden">
+ <div className="glass-card rounded-2xl p-6 sm:p-8 lg:p-10 reveal delay-200 relative overflow-hidden">
  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
 
  {/* Email CTA */}
@@ -39,11 +40,11 @@ export default function Contact() {
  <div className=" text-description tracking-widest uppercase text-text-muted mb-4">Reach me at</div>
  <button
  onClick={copyEmail}
- className="group inline-flex items-center gap-3 text-heading font-extrabold text-accent hover:opacity-80 transition-all duration-200 tracking-tight"
+ className="group flex flex-wrap items-center justify-center gap-2 text-title sm:text-heading font-extrabold text-accent hover:opacity-80 transition-all duration-200 tracking-tight break-all w-full"
  >
- {personalInfo.email}
- <span className="text-title text-text-dim group-hover:text-accent transition-colors">
- {copied ? '✓' : '⎘'}
+ <span className="break-all">{personalInfo.email}</span>
+ <span className="text-text-dim group-hover:text-accent transition-colors flex-shrink-0">
+ {copied ? <Check size={18} /> : <Copy size={18} />}
  </span>
  </button>
  {copied && (

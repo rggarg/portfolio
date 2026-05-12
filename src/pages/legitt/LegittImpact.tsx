@@ -61,7 +61,7 @@ export default function LegittImpact() {
         </div>
 
         {/* Enterprise clients */}
-        <div className="reveal">
+        {/* <div className="reveal">
           <h3 className="text-title-sm font-black text-text-main text-center mb-8">
             Trusted by Enterprise Clients
           </h3>
@@ -86,7 +86,7 @@ export default function LegittImpact() {
             ))}
           </div>
 
-          {/* G2 rating badge */}
+          
           <div className="flex justify-center">
             <div
               className="glass-card rounded-full px-6 py-3 border flex items-center gap-3"
@@ -99,7 +99,7 @@ export default function LegittImpact() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

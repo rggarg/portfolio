@@ -83,6 +83,7 @@ export const techLogos = [
  "Node.js", "React.js", "MongoDB", "AWS", "Express.js",
  "JavaScript", "TypeScript", "Docker", "Git", "REST APIs",
  "Microservices", "SQL", "Redis", "Salesforce", "CI/CD",
+ "Firebase", "Next.js", "Vite.js", "GCP", "Redux", "Python",
 ];
 
 export const experience = [

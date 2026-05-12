@@ -119,21 +119,59 @@ function PipelineFlow({
         <h3 className="text-title-sm font-black text-text-main">{title}</h3>
       </div>
 
-      {/* Steps row */}
-      <div className="flex flex-col sm:flex-row items-start gap-0">
+      {/* ── Mobile layout: vertical list with connector line ── */}
+      <div className="flex flex-col gap-0 sm:hidden">
         {steps.map((step, i) => (
-          <div key={i} className="flex sm:flex-col items-start sm:items-stretch flex-1 min-w-0 w-full sm:w-auto">
+          <div key={i} className="flex gap-4">
+            {/* Left: step indicator + vertical line */}
+            <div className="flex flex-col items-center flex-shrink-0" style={{ width: '44px' }}>
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                style={{
+                  background: step.bg,
+                  border: `1.5px solid ${step.border}`,
+                  boxShadow: `0 0 14px ${step.color}18`,
+                }}
+              >
+                {step.icon}
+              </div>
+              {i < steps.length - 1 && (
+                <div className="flex-1 w-px mt-1" style={{ background: `linear-gradient(180deg, ${step.color}50, ${steps[i + 1].color}30)`, minHeight: '24px' }} />
+              )}
+            </div>
+
+            {/* Right: text */}
+            <div className={`flex-1 pb-5 ${i === steps.length - 1 ? '' : ''}`}>
+              <div className="flex items-center gap-2 mb-0.5">
+                <span
+                  className="text-micro font-black px-1.5 py-0.5 rounded tracking-widest"
+                  style={{ background: step.color + '18', color: step.color, border: `1px solid ${step.color}30` }}
+                >
+                  STEP {step.step}
+                </span>
+                <span className="text-small font-black text-text-main">{step.label}</span>
+              </div>
+              <div className="text-micro font-bold tracking-wider uppercase mb-1" style={{ color: step.color }}>
+                {step.sublabel}
+              </div>
+              <div className="text-mini text-text-dim leading-snug">{step.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* ── Desktop layout: horizontal flow ── */}
+      <div className="hidden sm:flex items-start gap-0">
+        {steps.map((step, i) => (
+          <div key={i} className="flex items-start flex-1 min-w-0">
             {/* Step card */}
             <div className="flex-1 min-w-0 flex flex-col items-center text-center">
-              {/* Step number pill */}
               <div
                 className="text-micro font-black px-2 py-0.5 rounded-full mb-3 tracking-widest"
                 style={{ background: step.color + '18', color: step.color, border: `1px solid ${step.color}35` }}
               >
                 STEP {step.step}
               </div>
-
-              {/* Icon bubble */}
               <div
                 className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-transform duration-300 hover:scale-110"
                 style={{
@@ -144,39 +182,20 @@ function PipelineFlow({
               >
                 {step.icon}
               </div>
-
-              {/* Labels */}
               <div className="text-small font-black text-text-main mb-0.5">{step.label}</div>
-              <div
-                className="text-micro font-bold tracking-wider uppercase mb-2"
-                style={{ color: step.color }}
-              >
+              <div className="text-micro font-bold tracking-wider uppercase mb-2" style={{ color: step.color }}>
                 {step.sublabel}
               </div>
               <div className="text-mini text-text-dim leading-snug px-1">{step.desc}</div>
             </div>
 
-            {/* Horizontal connector - hidden on mobile vertical layout */}
+            {/* Horizontal connector */}
             {i < steps.length - 1 && (
-              <div className="hidden sm:flex flex-col items-center justify-start pt-8 flex-shrink-0 mx-1" style={{ width: '36px' }}>
-                {/* Animated dashed line with arrow */}
-                <div className="flex items-center gap-0.5 mt-0">
-                  <div
-                    className="h-px flex-1"
-                    style={{
-                      width: '10px',
-                      background: `linear-gradient(90deg, ${steps[i].color}60, ${steps[i + 1].color}60)`,
-                    }}
-                  />
+              <div className="flex flex-col items-center justify-start pt-8 flex-shrink-0 mx-1" style={{ width: '36px' }}>
+                <div className="flex items-center gap-0.5">
+                  <div className="h-px" style={{ width: '10px', background: `linear-gradient(90deg, ${steps[i].color}60, ${steps[i + 1].color}60)` }} />
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path
-                      d="M2 7 L10 7 M7 4 L11 7 L7 10"
-                      stroke={steps[i + 1].color}
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      opacity="0.7"
-                    />
+                    <path d="M2 7 L10 7 M7 4 L11 7 L7 10" stroke={steps[i + 1].color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
                   </svg>
                 </div>
               </div>

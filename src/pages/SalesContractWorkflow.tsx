@@ -256,7 +256,7 @@ export default function SalesContractWorkflow() {
 
             {/* Legitt (builder) */}
             <div className="flex flex-col items-center gap-1.5">
-              <span className="text-micro tracking-wide-em uppercase text-text-dim font-medium">Built by</span>
+              <span className="text-micro tracking-wide-em uppercase text-text-dim font-medium">Built At</span>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border/60 bg-white/[0.03] backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
                 <img
                   src={legittLogo}
@@ -268,16 +268,16 @@ export default function SalesContractWorkflow() {
             </div>
 
             {/* Arrow connector */}
-            <div className="flex items-center gap-1 text-text-muted mt-4">
+            {/* <div className="flex items-center gap-1 text-text-muted mt-4">
               <div className="h-px w-6 bg-border" />
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="text-border">
                 <path d="M1 4h6M4 1l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <div className="h-px w-6 bg-border" />
-            </div>
+            </div> */}
 
             {/* RateGain (client) */}
-            <div className="flex flex-col items-center gap-1.5">
+            {/* <div className="flex flex-col items-center gap-1.5">
               <span className="text-micro tracking-wide-em uppercase text-text-dim font-medium">Built for</span>
               <div className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border/60 bg-white/[0.03] backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
                 <img
@@ -287,7 +287,7 @@ export default function SalesContractWorkflow() {
                   style={{ filter: 'brightness(0) invert(1)' }}
                 />
               </div>
-            </div>
+            </div> */}
 
           </div>
 

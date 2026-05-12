@@ -91,20 +91,19 @@ export default function TipTapPerformance() {
               <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: '#00ccaa' }}>
                 ProseMirror Transaction Batching
               </h4>
-              <pre
-                className="text-mini font-mono leading-relaxed overflow-x-auto"
-                style={{ color: '#a5f3d0' }}
-              >{`// ✗ BAD: 3 separate DOM passes
-editor.chain().setBold().run();
-editor.chain().setItalic().run();
-editor.chain().setFontSize(14).run();
-
-// ✓ GOOD: single batched transaction
-editor.chain()
-  .setBold()
-  .setItalic()
-  .setFontSize(14)
-  .run();`}</pre>
+              <div className="space-y-2">
+                {[
+                  'Multiple formatting changes (bold, italic, font size) are chained into a single transaction using editor.chain()',
+                  'A single .run() call at the end commits all changes in one DOM pass instead of three separate re-renders',
+                  'Reduces layout thrashing — especially impactful on 50–100 page contracts with thousands of nodes',
+                  'ProseMirror batches all transaction steps before dispatching, keeping the editor state consistent throughout',
+                ].map((point, i) => (
+                  <div key={i} className="flex items-start gap-2 text-mini text-text-dim">
+                    <span style={{ color: '#00ccaa' }} className="flex-shrink-0 mt-0.5">✓</span>
+                    {point}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

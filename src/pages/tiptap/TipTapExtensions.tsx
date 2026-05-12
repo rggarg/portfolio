@@ -54,18 +54,6 @@ export default function TipTapExtensions() {
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Left */}
               <div className="space-y-8">
-                {/* Data structure */}
-                <div>
-                  <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: ext.color }}>
-                    Node Data Structure
-                  </h4>
-                  <pre
-                    className="text-mini font-mono p-4 rounded-xl overflow-x-auto leading-relaxed"
-                    style={{ background: 'rgba(0,0,0,0.4)', color: '#a5f3d0', border: `1px solid ${ext.color}20` }}
-                  >
-                    {ext.dataStructure}
-                  </pre>
-                </div>
                 {/* Granularity */}
                 <div>
                   <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: ext.color }}>
@@ -106,18 +94,6 @@ export default function TipTapExtensions() {
 
               {/* Right */}
               <div className="space-y-8">
-                {/* Code */}
-                <div>
-                  <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: ext.color }}>
-                    Accept / Reject Implementation
-                  </h4>
-                  <pre
-                    className="text-mini font-mono p-4 rounded-xl overflow-x-auto leading-relaxed"
-                    style={{ background: 'rgba(0,0,0,0.4)', color: '#a5f3d0', border: `1px solid ${ext.color}20` }}
-                  >
-                    {ext.code}
-                  </pre>
-                </div>
                 {/* Perf */}
                 <div>
                   <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: ext.color }}>
@@ -140,17 +116,6 @@ export default function TipTapExtensions() {
           {ext.id === 'signature' && (
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="space-y-8">
-                <div>
-                  <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: ext.color }}>
-                    Node Data Structure
-                  </h4>
-                  <pre
-                    className="text-mini font-mono p-4 rounded-xl overflow-x-auto leading-relaxed"
-                    style={{ background: 'rgba(0,0,0,0.4)', color: '#c4b5fd', border: `1px solid ${ext.color}20` }}
-                  >
-                    {ext.dataStructure}
-                  </pre>
-                </div>
                 <div>
                   <h4 className="text-small font-bold tracking-widest uppercase mb-3" style={{ color: ext.color }}>
                     Placement Methods
