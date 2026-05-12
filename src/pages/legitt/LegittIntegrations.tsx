@@ -180,51 +180,39 @@ export default function LegittIntegrations() {
           <div className="reveal">
             <h3 className="text-title-sm font-black text-text-main mb-5">Version Storage Schema</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              <div>
-                <div className="text-small font-bold mb-2" style={{ color: '#fb923c' }}>MongoDB - Version Metadata</div>
-                <pre
-                  className="text-mini font-mono p-4 rounded-xl leading-relaxed overflow-x-auto"
-                  style={{ background: 'rgba(0,0,0,0.5)', color: '#fed7aa', border: '1px solid rgba(251,146,60,0.2)' }}
-                >{`{
-  _id: ObjectId("..."),
-  doc_id: ObjectId("..."),
-  version: 4,               // v1, v2, v3...
-  created_by: ObjectId("..."),
-  created_at: ISODate("..."),
-  event_type: "manual_save", // 'auto_save', 'rollback', 'approval_checkpoint', etc.
-  s3_object_key: "docs/v4.json", // → AWS S3 ref
-  is_locked: false,         // true after signing
-  metadata: {
-    word_count: 2841,
-    page_estimate: 12,
-    has_redlines: true,
-    sig_field_count: 3
-  }
-}`}</pre>
+              <div className="glass-card rounded-xl p-5 border-border/60" style={{ borderColor: 'rgba(251,146,60,0.2)' }}>
+                <div className="text-small font-bold mb-4" style={{ color: '#fb923c' }}>MongoDB — Version Metadata</div>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    { field: 'doc_id + version', desc: 'Links each version snapshot to its parent document with an incrementing version counter' },
+                    { field: 'event_type', desc: 'Records why the version was created: manual_save, auto_save, rollback, or approval_checkpoint' },
+                    { field: 's3_object_key', desc: 'Pointer to the actual content blob stored in AWS S3 — metadata stays lean in Mongo' },
+                    { field: 'is_locked', desc: 'Set to true after signing — prevents any further edits to that version' },
+                    { field: 'metadata', desc: 'Word count, page estimate, redline presence, and signature field count for quick dashboard reads' },
+                  ].map((item, i) => (
+                    <div key={i} className="rounded-lg p-3" style={{ background: 'rgba(251,146,60,0.05)', border: '1px solid rgba(251,146,60,0.12)' }}>
+                      <div className="text-mini font-mono font-bold mb-1" style={{ color: '#fb923c' }}>{item.field}</div>
+                      <div className="text-mini text-text-dim leading-snug">{item.desc}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div>
-                <div className="text-small font-bold mb-2" style={{ color: '#fb923c' }}>AWS S3 - Content Blob</div>
-                <pre
-                  className="text-mini font-mono p-4 rounded-xl leading-relaxed overflow-x-auto"
-                  style={{ background: 'rgba(0,0,0,0.5)', color: '#fed7aa', border: '1px solid rgba(251,146,60,0.2)' }}
-                >{`// Path: s3://legitt-contracts/docs/v4.json
-// Content-Type: application/json
-
-{
-  "type": "doc",
-  "content": [
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Full TipTap document JSON..."
-        }
-      ]
-    }
-    // ... complete node tree
-  ]
-}`}</pre>
+              <div className="glass-card rounded-xl p-5 border-border/60" style={{ borderColor: 'rgba(251,146,60,0.2)' }}>
+                <div className="text-small font-bold mb-4" style={{ color: '#fb923c' }}>AWS S3 — Content Blob</div>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    { field: 'Storage path', desc: "Each version is stored as a separate object key (e.g. docs/v4.json) under the document's S3 prefix" },
+                    { field: 'Content type', desc: 'Stored as application/json — the full TipTap document node tree serialised to JSON' },
+                    { field: 'Immutability', desc: 'Once written, blobs are never overwritten — new versions always create a new object, preserving history' },
+                    { field: 'Rollback', desc: 'Restoring any prior version is a single S3 fetch: load the blob, write a new version entry pointing to it' },
+                    { field: 'Cost efficiency', desc: 'Only changed content creates a new blob; auto-saves with no actual diff are skipped at the API layer' },
+                  ].map((item, i) => (
+                    <div key={i} className="rounded-lg p-3" style={{ background: 'rgba(251,146,60,0.05)', border: '1px solid rgba(251,146,60,0.12)' }}>
+                      <div className="text-mini font-mono font-bold mb-1" style={{ color: '#fb923c' }}>{item.field}</div>
+                      <div className="text-mini text-text-dim leading-snug">{item.desc}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

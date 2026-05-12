@@ -60,37 +60,21 @@ export default function LegittApproval() {
             {/* MongoDB dept hierarchy */}
             <div className="reveal">
               <h3 className="text-title-sm font-black text-text-main mb-4">MongoDB Department Hierarchy</h3>
-              <pre
-                className="text-mini font-mono p-5 rounded-xl leading-relaxed overflow-x-auto"
-                style={{ background: 'rgba(0,0,0,0.5)', color: '#c4b5fd', border: '1px solid rgba(167,139,250,0.2)' }}
-              >{`// dept_hierarchies collection
-{
-  orgId: "legitt_client_001",
-  departments: [
-    {
-      id: "legal",
-      name: "Legal",
-      head: { userId: "u_001", name: "Sarah J." },
-      approvalThreshold: 50000,  // contracts under this → skip
-      escalationHours: 48,
-      subDepts: [
-        {
-          id: "contracts",
-          name: "Contracts Team",
-          approvers: ["u_002", "u_003"],
-          parallel: false  // sequential within team
-        }
-      ]
-    },
-    {
-      id: "finance",
-      name: "Finance",
-      head: { userId: "u_010" },
-      approvalThreshold: 100000,
-      subDepts: [/* ... */]
-    }
-  ]
-}`}</pre>
+              <div className="grid sm:grid-cols-2 gap-3" style={{ borderColor: 'rgba(167,139,250,0.2)' }}>
+                {[
+                  { field: 'orgId', desc: 'Tenant identifier — each enterprise client has isolated department trees' },
+                  { field: 'departments[ ]', desc: 'Top-level departments (Legal, Finance, etc.) each with head user and approval threshold' },
+                  { field: 'approvalThreshold', desc: 'Contracts below this value skip the department entirely — no unnecessary reviews' },
+                  { field: 'escalationHours', desc: 'Per-department deadline before auto-escalation fires (default 48 h)' },
+                  { field: 'subDepts[ ]', desc: 'Nested teams within a department, each with their own approver list and sequential/parallel flag' },
+                  { field: 'parallel: false', desc: 'Sequential within team — approvers sign off one at a time in defined order' },
+                ].map((item, i) => (
+                  <div key={i} className="glass-card rounded-xl p-4 border-border/60" style={{ borderColor: 'rgba(167,139,250,0.15)' }}>
+                    <div className="text-mini font-mono font-bold mb-1.5" style={{ color: '#a78bfa' }}>{item.field}</div>
+                    <div className="text-mini text-text-dim leading-snug">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

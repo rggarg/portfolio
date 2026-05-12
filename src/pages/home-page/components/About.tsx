@@ -69,28 +69,6 @@ export default function About() {
  <p className="text-text-dim text-subtitle leading-relaxed">{v.desc}</p>
  </div>
  ))}
-
- {/* Code snippet card */}
- <div className="sm:col-span-2 glass-card rounded-xl p-5 text-description overflow-hidden">
- <div className="flex items-center gap-2 mb-4">
- <span className="w-3 h-3 rounded-full bg-red-500/60" />
- <span className="w-3 h-3 rounded-full bg-yellow-500/60" />
- <span className="w-3 h-3 rounded-full bg-green-500/60" />
- <span className="ml-2 text-text-muted text-description tracking-wider">engineer.js</span>
- </div>
- <pre className="text-description leading-relaxed overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
- <code>
- <span className="text-text-muted">{'// My engineering philosophy'}</span>{'\n'}
- <span className="text-blue-400">const</span>{' '}
- <span className="text-accent">engineer</span>{' = {\n'}
- {' '}<span className="text-amber-400">stack</span>{': ['}<span className="text-green-400">'Node'</span>{', '}<span className="text-green-400">'React'</span>{', '}<span className="text-green-400">'AWS'</span>{'],\n'}
- {' '}<span className="text-amber-400">mindset</span>{': '}<span className="text-green-400">'ownership-first'</span>{',\n'}
- {' '}<span className="text-amber-400">focus</span>{': '}<span className="text-green-400">'scalability + AI'</span>{',\n'}
- {' '}<span className="text-amber-400">ships</span>{': '}<span className="text-green-400">'production-grade'</span>{',\n'}
- {'}'}
- </code>
- </pre>
- </div>
  </div>
  </div>
  </div>
